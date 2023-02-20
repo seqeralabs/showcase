@@ -1,0 +1,17 @@
+{
+  "description": "Pipeline for assembly and intrahost/low-frequency variant calling for viral samples.",
+  "launch": {
+    "pipeline": "https://github.com/nf-core/viralrecon",
+    "revision": "2.5",
+    "configProfiles": [
+      "test"
+    ],
+    "userSecrets": [],
+    "workspaceSecrets": [],
+    "configText": "process.errorStrategy = 'retry'\nprocess.maxRetries = 3",
+    "paramsText": "outdir: 's3://seqeralabs-showcase/nf-core-viralrecon/illumina/results_2023_02_20'",
+    "resume": false,
+    "pullLatest": false,
+    "stubRun": false
+  }
+}

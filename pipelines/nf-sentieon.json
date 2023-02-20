@@ -1,0 +1,19 @@
+{
+  "description": "Proof-of-concept Nextflow pipeline to run Sentieon software.\nhttps://www.sentieon.com/",
+  "launch": {
+    "pipeline": "https://github.com/seqeralabs/nf-sentieon",
+    "revision": "master",
+    "configProfiles": [
+      "test"
+    ],
+    "userSecrets": [],
+    "workspaceSecrets": [
+      "SENTIEON_LICENSE_BASE64"
+    ],
+    "configText": "process.errorStrategy = 'retry'\nprocess.maxRetries = 3",
+    "paramsText": "outdir: 's3://seqeralabs-showcase/nf-sentieon/results_2023_02_20'",
+    "resume": false,
+    "pullLatest": false,
+    "stubRun": false
+  }
+}

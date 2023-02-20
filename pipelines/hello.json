@@ -1,0 +1,12 @@
+{
+  "description": "Hello World test pipeline",
+  "launch": {
+    "pipeline": "https://github.com/nextflow-io/hello",
+    "revision": "master",
+    "userSecrets": [],
+    "workspaceSecrets": [],
+    "resume": false,
+    "pullLatest": false,
+    "stubRun": false
+  }
+}

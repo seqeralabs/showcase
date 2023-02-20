@@ -1,0 +1,20 @@
+{
+  "description": "Proof-of-concept Nextflow pipeline to run Illumina DRAGEN software.",
+  "launch": {
+    "pipeline": "https://github.com/seqeralabs/nf-dragen",
+    "revision": "master",
+    "configProfiles": [
+      "test"
+    ],
+    "userSecrets": [],
+    "workspaceSecrets": [
+      "DRAGEN_PASSWORD",
+      "DRAGEN_USERNAME"
+    ],
+    "configText": "process.errorStrategy = 'retry'\nprocess.maxRetries = 3",
+    "paramsText": "outdir: 's3://nf-tower-bucket/nf-dragen/results_2023_02_20'",
+    "resume": false,
+    "pullLatest": true,
+    "stubRun": false
+  }
+}
