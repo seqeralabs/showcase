@@ -1,0 +1,28 @@
+{
+  "region": "eu-west-1",
+  "cliPath": "/home/ec2-user/miniconda/bin/aws",
+  "workDir": "s3://seqeralabs-showcase",
+  "environment": [],
+  "waveEnabled": false,
+  "fusion2Enabled": false,
+  "nvnmeStorageEnabled": false,
+  "forge": {
+    "type": "SPOT",
+    "minCpus": 0,
+    "maxCpus": 500,
+    "gpuEnabled": false,
+    "ebsAutoScale": true,
+    "instanceTypes": [],
+    "subnets": [],
+    "securityGroups": [],
+    "disposeOnDeletion": true,
+    "allowBuckets": [
+      "s3://ngi-igenomes",
+      "s3://nf-core-awsmegatests",
+      "s3://seqeralabs-showcase"
+    ],
+    "efsCreate": false,
+    "dragenEnabled": false
+  },
+  "discriminator": "aws-batch"
+}

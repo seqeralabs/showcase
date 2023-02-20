@@ -1,0 +1,26 @@
+{
+  "region": "eu-west-1",
+  "cliPath": "/home/ec2-user/miniconda/bin/aws",
+  "workDir": "s3://nf-tower-bucket",
+  "environment": [],
+  "waveEnabled": false,
+  "fusion2Enabled": false,
+  "nvnmeStorageEnabled": false,
+  "forge": {
+    "type": "SPOT",
+    "minCpus": 0,
+    "maxCpus": 500,
+    "gpuEnabled": false,
+    "ebsAutoScale": true,
+    "instanceTypes": [],
+    "subnets": [],
+    "securityGroups": [],
+    "disposeOnDeletion": true,
+    "allowBuckets": [],
+    "fusionEnabled": false,
+    "efsCreate": false,
+    "dragenEnabled": true,
+    "dragenAmiId": "ami-0cbc905b0ead68198"
+  },
+  "discriminator": "aws-batch"
+}
