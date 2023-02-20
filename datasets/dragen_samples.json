@@ -1,0 +1,7 @@
+{
+  "dataset": {
+    "name": "dragen_samples",
+    "description": "Samplesheet containing links to minimal data required to test the seqeralabs/nf-dragen pipeline from end-to-end.",
+    "mediaType": "text/csv"
+  }
+}

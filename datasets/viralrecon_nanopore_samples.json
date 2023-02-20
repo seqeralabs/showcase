@@ -1,0 +1,7 @@
+{
+  "dataset": {
+    "name": "viralrecon_nanopore_samples",
+    "description": "Samplesheet containing links to minimal Nanopore metadata required to test the nf-core/viralrecon pipeline (v2.5) from end-to-end.",
+    "mediaType": "text/csv"
+  }
+}
