@@ -1,4 +1,4 @@
-# seqeralabs/showcase Workspace on Nextflow Tower
+# `seqeralabs/showcase` Workspace on Nextflow Tower
 
 ## Infrastructure as code
 
