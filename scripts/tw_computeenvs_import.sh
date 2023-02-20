@@ -13,11 +13,14 @@ do
     JSON=${JSONS[$i]}
     NAME=$(basename "$JSON" .json)
 
+    ## Infer credentials from compute environment name
     CREDENTIALS=$(echo $NAME | cut -d "_" -f1,2 )"_credentials"
-    if [[ "$NAME" == *"seqera_aws"* ]]; then
+    if [[ "$NAME" == *"seqera_aws"* ]]
+    then
         CREDENTIALS="seqera_aws_development_credentials"
     fi
-    if [[ "$NAME" == *"dragen"* ]]; then
+    if [[ "$NAME" == *"dragen"* ]]
+    then
         CREDENTIALS="seqera_aws_management_credentials"
     fi
 
