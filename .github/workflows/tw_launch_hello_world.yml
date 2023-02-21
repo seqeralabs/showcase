@@ -1,8 +1,6 @@
 name: Tower Launch Hello World
+# The Hello World pipeline will be launched on all Compute Environments in the Tower Workspace.
 # This workflow can be triggered manually with the GitHub actions workflow dispatch button.
-# Pipeline : https://github.com/nextflow-io/hello
-# Workspace: seqeralabs/showcase
-# Platforms: AWS, Azure, GCP
 
 on:
   workflow_dispatch:
@@ -13,17 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TOWER_ACCESS_TOKEN: ${{ secrets.TOWER_ACCESS_TOKEN }}
-    strategy:
-      matrix:
-        pipeline: [ 'hello' ]
-        compute-env: [ 'seqera_aws_ireland_fusionv2_nvme', 'seqera_azure_virginia', 'seqera_gcp_london' ]
-        include:
-          - compute-env: "seqera_aws_ireland_fusionv2_nvme"
-            bucket-prefix: "s3"
-          - compute-env: "seqera_azure_virginia"
-            bucket-prefix: "az"
-          - compute-env: "seqera_gcp_london"
-            bucket-prefix: "gs"
+      TOWER_WORKSPACE_NAME: seqeralabs/showcase
     steps:
       - name: Install tw CLI
         run: |
@@ -31,13 +19,17 @@ jobs:
           mv tw-* tw
           chmod +x tw
           sudo mv tw /usr/local/bin/
-          tw info
 
       - name: Tower Launch Hello World
         run: |
-          tw \
-            launch \
-            --workspace=seqeralabs/showcase \
-            --compute-env=${{ matrix.compute-env }} \
-            --work-dir=${{ matrix.bucket-prefix }}://seqeralabs-showcase \
-            ${{ matrix.pipeline }}
+          # Get list of Compute Environments in Workspace
+          COMPUTE_ENVS=( $( tw -o json compute-envs list --workspace=$TOWER_WORKSPACE_NAME | jq -r '.computeEnvs[].name' ) )
+          
+          # Loop through Compute Environments
+          for i in "${!COMPUTE_ENVS[@]}"
+          do 
+            WORK_DIR=( $( tw compute-envs export --name=${COMPUTE_ENVS[$i]} --workspace=$TOWER_WORKSPACE_NAME | jq -r '.workDir' ) )
+            
+            # Tower Launch Hello World
+            tw launch --workspace=$TOWER_WORKSPACE_NAME --compute-env=${COMPUTE_ENVS[$i]} --name="HOLA_${COMPUTE_ENVS[$i]}" --work-dir=$WORK_DIR hello
+          done
