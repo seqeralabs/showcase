@@ -35,13 +35,9 @@ jobs:
 
       - name: Tower Launch Hello World
         run: |
-          WORKDIR=${{ matrix.bucket-prefix }}://seqeralabs-showcase
-          OUTDIR=$WORKDIR/${{ matrix.pipeline }}/results_$(date '+%Y_%m_%d_%H_%M_%S')
-
           tw \
             launch \
             --workspace=seqeralabs/showcase \
-            --params-file=<(echo -e "outdir: $OUTDIR") \
             --compute-env=${{ matrix.compute-env }} \
-            --work-dir=$WORKDIR \
+            --work-dir=${{ matrix.bucket-prefix }}://seqeralabs-showcase \
             ${{ matrix.pipeline }}
