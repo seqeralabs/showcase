@@ -1,0 +1,47 @@
+name: Tower Launch Hello World
+# This workflow can be triggered manually with the GitHub actions workflow dispatch button.
+# Pipeline : https://github.com/nextflow-io/hello
+# Workspace: seqeralabs/showcase
+# Platforms: AWS, Azure, GCP
+
+on:
+  workflow_dispatch:
+jobs:
+  tw-launch-hello-world:
+    name: Tower Launch Hello World
+    if: github.repository == 'seqeralabs/showcase'
+    runs-on: ubuntu-latest
+    env:
+      TOWER_ACCESS_TOKEN: ${{ secrets.TOWER_ACCESS_TOKEN }}
+    strategy:
+      matrix:
+        pipeline: [ 'hello' ]
+        compute-env: [ 'seqera_aws_ireland_fusionv2_nvme', 'seqera_azure_virginia', 'seqera_gcp_london' ]
+        include:
+          - compute-env: "seqera_aws_ireland_fusionv2_nvme"
+            bucket-prefix: "s3"
+          - compute-env: "seqera_azure_virginia"
+            bucket-prefix: "az"
+          - compute-env: "seqera_gcp_london"
+            bucket-prefix: "gs"
+    steps:
+      - name: Install tw CLI
+        run: |
+          wget -L https://github.com/seqeralabs/tower-cli/releases/download/v0.7.3/tw-0.7.3-linux-x86_64
+          mv tw-* tw
+          chmod +x tw
+          sudo mv tw /usr/local/bin/
+          tw info
+
+      - name: Tower Launch Hello World
+        run: |
+          WORKDIR=${{ matrix.bucket-prefix }}://seqeralabs-showcase
+          OUTDIR=$WORKDIR/${{ matrix.pipeline }}/results_$(date '+%Y_%m_%d_%H_%M_%S')
+
+          tw \
+            launch \
+            --workspace=seqeralabs/showcase \
+            --params-file=<(echo -e "outdir: $OUTDIR") \
+            --compute-env=${{ matrix.compute-env }} \
+            --work-dir=$WORKDIR \
+            ${{ matrix.pipeline }}
