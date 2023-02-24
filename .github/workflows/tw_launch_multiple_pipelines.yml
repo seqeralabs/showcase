@@ -1,0 +1,47 @@
+name: Tower Launch Multiple Pipelines
+# Multiple pipelines in a Tower Workspace will be launched on a specified set of Compute Environments
+# This workflow can be triggered manually with the GitHub actions workflow dispatch button.
+
+on:
+  workflow_dispatch:
+jobs:
+  tw-launch-multiple-pipelines:
+    name: Tower Launch Multiple Pipelines
+    if: github.repository == 'seqeralabs/showcase'
+    runs-on: ubuntu-latest
+    env:
+      TOWER_ACCESS_TOKEN: ${{ secrets.TOWER_ACCESS_TOKEN }}
+      TOWER_WORKSPACE_NAME: seqeralabs/showcase
+    strategy:
+      matrix:
+        pipeline: [ 'hello', 'nf-core-rnaseq', 'nf-core-sarek', 'nf-core-viralrecon-illumina', 'nf-core-viralrecon-nanopore', 'nf-sentieon' ] 
+        compute-env: [ 'seqera_aws_ireland_fusionv2_nvme', 'seqera_azure_virginia', 'seqera_gcp_london' ]
+        include:
+          - compute-env: "seqera_aws_ireland_fusionv2_nvme"
+            run-name: "AWS_Ireland"
+          - compute-env: "seqera_azure_virginia"
+            run-name: "Azure_Virginia"
+          - compute-env: "seqera_gcp_london"
+            run-name: "GCP_London"
+    steps:
+      - name: Install tw CLI
+        run: |
+          wget -L https://github.com/seqeralabs/tower-cli/releases/download/v0.7.3/tw-0.7.3-linux-x86_64
+          mv tw-* tw
+          chmod +x tw
+          sudo mv tw /usr/local/bin/
+
+      - name: Tower Launch Multiple Pipelines
+        run: |
+          WORK_DIR=( $( tw compute-envs export --name=${{ matrix.compute-env }} --workspace=$TOWER_WORKSPACE_NAME | jq -r '.workDir' ) )
+          OUTDIR=$WORK_DIR/${{ matrix.pipeline }}/results_$(date '+%Y_%m_%d_%H_%M_%S')
+
+          # Tower Launch pipeline
+          tw \
+            launch \
+            --workspace=$TOWER_WORKSPACE_NAME \
+            --params-file=<(echo -e "outdir: $OUTDIR") \
+            --compute-env=${{ matrix.compute-env }} \
+            --work-dir=$WORK_DIR \
+            --name=${{ matrix.pipeline }}_${{ matrix.run-name }} \
+            ${{ matrix.pipeline }}
