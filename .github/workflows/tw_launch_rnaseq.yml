@@ -33,7 +33,7 @@ jobs:
       - name: Tower Launch nf-core/rnaseq
         run: |
           WORK_DIR=( $( tw compute-envs export --name=${{ matrix.compute-env }} --workspace=$TOWER_WORKSPACE_NAME | jq -r '.workDir' ) )
-          OUTDIR=$WORK_DIR/${{ matrix.pipeline }}/results_$(date '+%Y_%m_%d_%H_%M_%S')
+          OUTDIR=$WORK_DIR/nf-core-rnaseq/results_$(date '+%Y_%m_%d_%H_%M_%S')
 
           # Tower Launch nf-core/rnaseq
           tw \
