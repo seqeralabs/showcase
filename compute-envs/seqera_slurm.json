@@ -1,0 +1,10 @@
+{
+  "workDir": "/home/ubuntu/work",
+  "launchDir": "/home/ubuntu/showcase-launchdir",
+  "userName": "ubuntu",
+  "hostName": "slurm.seqera.io",
+  "headQueue": "long",
+  "computeQueue": "long",
+  "environment": [],
+  "discriminator": "slurm-platform"
+}
