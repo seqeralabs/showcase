@@ -1,5 +1,5 @@
 {
-  "description": "Hello World test pipeline",
+  "description": "Hello World test pipeline.",
   "launch": {
     "pipeline": "https://github.com/nextflow-io/hello",
     "revision": "master",
