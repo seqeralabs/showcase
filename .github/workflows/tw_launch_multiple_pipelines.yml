@@ -14,7 +14,7 @@ jobs:
       TOWER_WORKSPACE_NAME: seqeralabs/showcase
     strategy:
       matrix:
-        pipeline: [ 'hello', 'nf-core-rnaseq', 'nf-core-sarek', 'nf-core-viralrecon-illumina', 'nf-core-viralrecon-nanopore', 'nf-sentieon' ] 
+        pipeline: [ 'hello', 'nf-core-rnaseq', 'nf-core-sarek', 'nf-core-viralrecon-illumina', 'nf-core-viralrecon-nanopore' ] 
         compute-env: [ 'seqera_aws_ireland_fusionv2_nvme', 'seqera_azure_virginia', 'seqera_gcp_london' ]
         include:
           - compute-env: "seqera_aws_ireland_fusionv2_nvme"
