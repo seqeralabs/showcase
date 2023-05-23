@@ -8,8 +8,9 @@
     ],
     "userSecrets": [],
     "workspaceSecrets": [],
-    "configText": "process {\n    errorStrategy = 'retry'\n    maxRetries = 1\n\n    withName: 'RUN_ALPHAFOLD2|RUN_ALPHAFOLD2_PRED|RUN_ALPHAFOLD2_MSA|COLABFOLD_BATCH' {\n        accelerator = 1\n        queue = 'TowerForge-6IOueWtY2YO2fmo4ES5M64-work'\n    }\n}",
-    "paramsText": "outdir: 's3://seqeralabs-showcase/nf-core-proteinfold/results_2023_02_20'\nuse_gpu: true",
+    "configText": "process {\n    withName: 'RUN_ALPHAFOLD2|RUN_ALPHAFOLD2_PRED|COLABFOLD_BATCH' {\n        accelerator = 1\n        queue = 'TowerForge-1JPnaIxHRoMbhq6TNLgUF6-work'\n    }\n}",
+    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/5Ig3IWRgjlgVjpURNF6CSN/v/1/n/samplesheet.csv'\noutdir: 's3://seqeralabs-showcase/nf-core-proteinfold/results'\nuse_gpu: true",
+    "preRunScript": "export NXF_VER=23.05.0-edge",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

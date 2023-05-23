@@ -6,10 +6,9 @@
     "configProfiles": [
       "test"
     ],
-    "userSecrets": [],
-    "workspaceSecrets": [],
-    "configText": "process.errorStrategy = 'retry'\nprocess.maxRetries = 3",
-    "paramsText": "outdir: 's3://seqeralabs-showcase/nf-core-sarek/results_2023_02_20'",
+    "configText": "",
+    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/31MNGqAiTAz464AECz5Ujr/v/1/n/sarek-samples.csv'\noutdir: 'az://seqeralabs-showcase/nf-core-sarek/results'",
+    "preRunScript": "export NXF_VER=23.05.0-edge",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

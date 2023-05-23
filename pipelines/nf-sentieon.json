@@ -10,8 +10,9 @@
     "workspaceSecrets": [
       "SENTIEON_LICENSE_BASE64"
     ],
-    "configText": "process.errorStrategy = 'retry'\nprocess.maxRetries = 3",
-    "paramsText": "outdir: 's3://seqeralabs-showcase/nf-sentieon/results_2023_02_20'",
+    "configText": "",
+    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/2K6cdA0sRDw7Bauc67CmIT/v/1/n/sentieon-samples.csv'\noutdir: 's3://seqeralabs-showcase/nf-sentieon/results'",
+    "preRunScript": "export NXF_VER=23.05.0-edge",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

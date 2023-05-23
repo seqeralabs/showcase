@@ -2,14 +2,13 @@
   "description": "Pipeline for assembly and intrahost/low-frequency variant calling for viral samples.",
   "launch": {
     "pipeline": "https://github.com/nf-core/viralrecon",
-    "revision": "2.5",
+    "revision": "2.6.0",
     "configProfiles": [
       "test_nanopore"
     ],
-    "userSecrets": [],
-    "workspaceSecrets": [],
-    "configText": "process.errorStrategy = 'retry'\nprocess.maxRetries = 3",
-    "paramsText": "outdir: 's3://seqeralabs-showcase/nf-core-viralrecon/nanopore/results_2023_02_20'",
+    "configText": "",
+    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/443ChPTGqwQZwl7xrvvGpP/v/1/n/viralrecon-nanopore-samples.csv'\noutdir: 'gs://seqeralabs-showcase/nf-core-viralrecon/nanopore/results'",
+    "preRunScript": "export NXF_VER=23.05.0-edge",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

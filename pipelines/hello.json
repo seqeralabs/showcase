@@ -5,6 +5,8 @@
     "revision": "master",
     "userSecrets": [],
     "workspaceSecrets": [],
+    "configText": "",
+    "preRunScript": "export NXF_VER=23.05.0-edge",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

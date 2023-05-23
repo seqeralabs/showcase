@@ -11,10 +11,10 @@
       "DRAGEN_PASSWORD",
       "DRAGEN_USERNAME"
     ],
-    "configText": "process.errorStrategy = 'retry'\nprocess.maxRetries = 3",
-    "paramsText": "outdir: 's3://nf-tower-bucket/nf-dragen/results_2023_02_20'",
+    "configText": "",
+    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/TqOcEbEQEvd4inHuRPUsV/v/1/n/dragen-samples.csv'\noutdir: 's3://nf-tower-bucket/nf-dragen/results'",
     "resume": false,
-    "pullLatest": true,
+    "pullLatest": false,
     "stubRun": false
   }
 }
