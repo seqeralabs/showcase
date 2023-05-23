@@ -1,5 +1,6 @@
 {
   "region": "eu-west-1",
+  "headJobRole": "arn:aws:iam::128997144437:role/TowerForge-4toJ3FjweBcD7aGJffQDD7-FargateRole",
   "workDir": "s3://seqeralabs-showcase",
   "environment": [],
   "waveEnabled": true,
@@ -18,14 +19,8 @@
     "subnets": [],
     "securityGroups": [],
     "disposeOnDeletion": true,
-    "allowBuckets": [
-      "s3://ngi-igenomes",
-      "s3://nf-core-awsmegatests",
-      "s3://seqeralabs-showcase"
-    ],
-    "efsCreate": false,
-    "dragenEnabled": false,
-    "ebsBootSize": 50
+    "allowBuckets": [],
+    "efsCreate": false
   },
   "discriminator": "aws-batch"
 }

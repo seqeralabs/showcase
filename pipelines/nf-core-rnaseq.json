@@ -1,8 +1,7 @@
 {
-  "description": "RNA sequencing analysis pipeline using STAR, RSEM, HISAT2 or Salmon with gene/isoform counts and extensive quality control.",
   "launch": {
     "pipeline": "https://github.com/nf-core/rnaseq",
-    "revision": "3.11.2",
+    "revision": "3.12.0",
     "configProfiles": [
       "test"
     ],
@@ -10,7 +9,7 @@
     "workspaceSecrets": [],
     "configText": "",
     "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/7DPM3wJTa6zDROKw6SGFLg/v/2/n/rnaseq-samples.csv'\noutdir: 's3://seqeralabs-showcase/nf-core-rnaseq/results'",
-    "preRunScript": "export NXF_VER=23.05.0-edge",
+    "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

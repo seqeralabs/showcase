@@ -1,0 +1,119 @@
+site_name: "Seqera Platform: Demonstration Walkthrough"
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  features:
+    - content.tooltips
+    - navigation.footer
+    - navigation.tabs
+    - navigation.path
+    - navigation.top
+    - navigation.instant
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.integrate
+    - content.tabs.link
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+
+  font:
+    text: Sans Serif
+
+  palette:
+    primary: dark purple
+    accent: dark purple
+
+  icon:
+    admonition:
+      note: octicons/tag-16
+      info: octicons/info-16
+      advanced: octicons/squirrel-16
+
+repo_url: https://github.com/ejseqera/showcase #TODO
+copyright: Copyright &copy; 2024 Seqera
+
+extra_css:
+  - "style.css"
+
+extra_javascript:
+  - https://buttons.github.io/buttons.js
+
+markdown_extensions:
+  - pymdownx.details
+  - pymdownx.superfences
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.blocks.admonition:
+      types:
+        - new
+        - settings
+        - note
+        - abstract
+        - info
+        - tip
+        - success
+        - question
+        - warning
+        - failure
+        - danger
+        - bug
+        - example
+        - quote
+  - pymdownx.blocks.details:
+      types:
+        - name: details-new
+          class: new
+        - name: details-settings
+          class: settings
+        - name: details-note
+          class: note
+        - name: details-abstract
+          class: abstract
+        - name: details-info
+          class: info
+        - name: details-tip
+          class: tip
+        - name: details-success
+          class: success
+        - name: details-question
+          class: question
+        - name: details-warning
+          class: warning
+        - name: details-failure
+          class: failure
+        - name: details-danger
+          class: danger
+        - name: details-bug
+          class: bug
+        - name: details-example
+          class: example
+        - name: details-quote
+          class: quote
+  - pymdownx.blocks.html:
+
+nav:
+  - Showcase Demonstration:
+      - Getting Started: index.md
+      - What is Nextflow?: 001_what_is_nextflow.md
+      - What is the Seqera Platform?: 002_what_is_the_seqera_platform.md
+      - Accessing the Platform: 003_accessing_the_platform.md
+      - Launching pipelines: 004_launching_pipelines.md
+      - Monitoring runs: 007_monitoring_runs.md
+      - Viewing run information: 008_viewing_run_information.md
+      - Optimizing pipelines: 009_optimizing_pipelines.md
+      - Using Data Explorer: 010_using_data_explorer.md
+      - Tertiary Analysis in Data Studios: 011_tertiary_analysis_data_studios.md
+      - Setting up a Data Studio: 012_setting_up_data_studio.md
+      - Automation on the Seqera Platform: 014_automation_on_the_seqera_platform.md
+      - Seqera Pipelines: 015_seqera_pipelines.md
+      - Seqera Containers: 016_seqera_containers.md
+      - Walkthrough summary: 017_walkthrough_summary.md
+      - Resources: 018_resources.md

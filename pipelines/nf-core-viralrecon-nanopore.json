@@ -7,8 +7,9 @@
       "test_nanopore"
     ],
     "configText": "",
-    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/443ChPTGqwQZwl7xrvvGpP/v/1/n/viralrecon-nanopore-samples.csv'\noutdir: 'gs://seqeralabs-showcase/nf-core-viralrecon/nanopore/results'",
-    "preRunScript": "export NXF_VER=23.05.0-edge",
+    "towerConfig": "",
+    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/443ChPTGqwQZwl7xrvvGpP/v/1/n/viralrecon-nanopore-samples.csv'\noutdir: 'gs://seqeralabs-showcase-eu-north-1/nf-core-viralrecon/nanopore/results'",
+    "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

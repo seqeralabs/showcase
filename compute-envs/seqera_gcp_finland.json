@@ -1,0 +1,11 @@
+{
+  "location": "europe-north1",
+  "workDir": "gs://seqeralabs-showcase-eu-north-1",
+  "spot": true,
+  "bootDiskSizeGb": 200,
+  "projectId": "tower-cloud-testing",
+  "sshDaemon": false,
+  "usePrivateAddress": false,
+  "environment": [],
+  "discriminator": "google-batch"
+}

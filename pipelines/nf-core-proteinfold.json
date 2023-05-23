@@ -8,9 +8,9 @@
     ],
     "userSecrets": [],
     "workspaceSecrets": [],
-    "configText": "process {\n    withName: 'RUN_ALPHAFOLD2|RUN_ALPHAFOLD2_PRED|COLABFOLD_BATCH' {\n        accelerator = 1\n        queue = 'TowerForge-1JPnaIxHRoMbhq6TNLgUF6-work'\n    }\n}",
-    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/5Ig3IWRgjlgVjpURNF6CSN/v/1/n/samplesheet.csv'\noutdir: 's3://seqeralabs-showcase/nf-core-proteinfold/results'\nuse_gpu: true",
-    "preRunScript": "export NXF_VER=23.05.0-edge",
+    "configText": "process {\n    withName: 'RUN_ALPHAFOLD2|RUN_ALPHAFOLD2_PRED|COLABFOLD_BATCH' {\n        accelerator = 1\n        queue = 'TowerForge-5ZfzTbavbsB9Tx7YRr2ut0-work'\n    }\n}",
+    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/5Ig3IWRgjlgVjpURNF6CSN/v/1/n/samplesheet.csv'\noutdir: 's3://seqeralabs-showcase/nf-core-proteinfold/results'\nuse_gpu: true\nalphafold2_db: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini\"\nbfd_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/bfd/*\"\nsmall_bfd_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/small_bfd/*\"\nalphafold2_params_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/alphafold_params_*/*\"\nmgnify_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/mgnify/*\"\npdb70_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/pdb70/**\"\npdb_mmcif_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/pdb_mmcif/**\"\nuniclust30_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/uniclust30/**\"\nuniref90_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/uniref90/*\"\npdb_seqres_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/pdb_seqres/*\"\nuniprot_path: \"s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/uniprot/*\"",
+    "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

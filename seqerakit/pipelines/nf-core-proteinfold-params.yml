@@ -1,0 +1,13 @@
+outdir: "s3://seqeralabs-showcase/nf-core-proteinfold/results"
+use_gpu: true
+alphafold2_db: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini"
+bfd_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/bfd/*"
+small_bfd_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/small_bfd/*"
+alphafold2_params_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/alphafold_params_*/*"
+mgnify_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/mgnify/*"
+pdb70_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/pdb70/**"
+pdb_mmcif_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/pdb_mmcif/**"
+uniclust30_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/uniclust30/**"
+uniref90_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/uniref90/*"
+pdb_seqres_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/pdb_seqres/*"
+uniprot_path: "s3://ngi-igenomes/test-data/proteinfold/db/alphafold_mini/uniprot/*"
