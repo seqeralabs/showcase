@@ -1,0 +1,7 @@
+{
+  "dataset": {
+    "name": "proteinfold_sequences",
+    "description": "Samplesheet containing links to fasta files required to test the nf-core/proteinfold pipeline from end-to-end.",
+    "mediaType": "text/csv"
+  }
+}
