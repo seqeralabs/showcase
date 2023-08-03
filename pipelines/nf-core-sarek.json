@@ -8,7 +8,7 @@
     ],
     "configText": "",
     "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/31MNGqAiTAz464AECz5Ujr/v/1/n/sarek-samples.csv'\noutdir: 'az://seqeralabs-showcase/nf-core-sarek/results'",
-    "preRunScript": "export NXF_VER=23.05.0-edge",
+    "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

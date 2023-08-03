@@ -12,7 +12,7 @@
     ],
     "configText": "",
     "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/2K6cdA0sRDw7Bauc67CmIT/v/1/n/sentieon-samples.csv'\noutdir: 's3://seqeralabs-showcase/nf-sentieon/results'",
-    "preRunScript": "export NXF_VER=23.05.0-edge",
+    "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
     "resume": false,
     "pullLatest": false,
     "stubRun": false

@@ -1,13 +1,16 @@
 {
-  "workDir": "az://seqeralabs-showcase",
+  "workDir": "az://azure-benchmarking",
   "region": "eastus",
   "forge": {
-    "vmType": "Standard_D16s_v3",
-    "vmCount": 16,
+    "vmType": "Standard_E16d_v5",
+    "vmCount": 1,
     "autoScale": true,
-    "disposeOnDeletion": true
+    "disposeOnDeletion": true,
+    "containerRegIds": [
+      "4tcmOiDa0yYG40EIL4MIZq"
+    ]
   },
-  "deleteJobsOnCompletion": "on_success",
+  "deleteJobsOnCompletion": "always",
   "deletePoolsOnCompletion": false,
   "environment": [],
   "discriminator": "azure-batch"

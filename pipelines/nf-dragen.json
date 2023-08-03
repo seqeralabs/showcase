@@ -13,6 +13,7 @@
     ],
     "configText": "",
     "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/TqOcEbEQEvd4inHuRPUsV/v/1/n/dragen-samples.csv'\noutdir: 's3://nf-tower-bucket/nf-dragen/results'",
+    "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
     "resume": false,
     "pullLatest": false,
     "stubRun": false
