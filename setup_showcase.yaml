@@ -1,0 +1,145 @@
+compute-envs:
+  - name: 'seqera_aws_ireland_dragen'
+    workspace: 'seqeralabs/showcase'
+    credentials: 'seqera_aws_management_credentials'
+    wait: 'AVAILABLE'
+    file-path: './compute-envs/seqera_aws_ireland_dragen.json'
+    overwrite: True
+  - name: 'seqera_aws_ireland_fusionv2_nvme'
+    workspace: 'seqeralabs/showcase'
+    credentials: 'seqera_aws_development_credentials'
+    wait: 'AVAILABLE'
+    file-path: './compute-envs/seqera_aws_ireland_fusionv2_nvme.json'
+    overwrite: True
+  - name: 'seqera_aws_ireland_fusionv2_nvme_gpu'
+    workspace: 'seqeralabs/showcase'
+    credentials: 'seqera_aws_development_credentials'
+    wait: 'AVAILABLE'
+    file-path: './compute-envs/seqera_aws_ireland_fusionv2_nvme_gpu.json'
+    overwrite: True
+  - name: 'seqera_aws_ireland_s3'
+    workspace: 'seqeralabs/showcase'
+    wait: 'AVAILABLE'
+    file-path: './compute-envs/seqera_aws_ireland_s3.json'
+    overwrite: True
+  - name: 'seqera_azure_virginia'
+    workspace: 'seqeralabs/showcase'
+    wait: 'AVAILABLE'
+    file-path: './compute-envs/seqera_azure_virginia.json'
+    overwrite: True
+  - name: 'seqera_gcp_finland'
+    workspace: 'seqeralabs/showcase'
+    wait: 'AVAILABLE'
+    file-path: './compute-envs/seqera_gcp_finland.json'
+    overwrite: True
+  - name: 'seqera_slurm'
+    workspace: 'seqeralabs/showcase'
+    wait: 'AVAILABLE'
+    file-path: './compute-envs/seqera_slurm.json'
+    overwrite: True
+datasets:
+  - name: 'dragen_samples'
+    description: 'Samplesheet containing links to minimal data required to test the seqeralabs/nf-dragen pipeline from end-to-end'
+    header: true
+    workspace: 'seqerakit-e2e/showcase'
+    file-path: './datasets/dragen_samples.csv'
+    overwrite: True
+  - name: 'rnaseq_samples'
+    description: 'Samplesheet containing links to minimal data required to test the nf-core/rnaseq pipeline (v3.10) from end-to-end.\nFurther information about how the dataset was created can be obtained via the link below:\nhttps://github.com/nf-core/test-datasets/tree/rnaseq#minimal-test-dataset-origin'
+    header: true
+    workspace: 'seqerakit-e2e/showcase'
+    file-path: './datasets/rnaseq_samples.csv'
+    overwrite: True
+  - name: 'sarek_samples'
+    description: 'Samplesheet containing links to minimal data required to test the nf-core/sarek pipeline (v3.1.2) from end-to-end.'
+    header: true
+    workspace: 'seqerakit-e2e/showcase'
+    file-path: './datasets/sarek_samples.csv'
+    overwrite: True
+  - name: 'sentieon_samples'
+    description: 'Samplesheet containing links to minimal data required to test the seqeralabs/nf-sentieon pipeline from end-to-end'
+    header: true
+    workspace: 'seqerakit-e2e/showcase'
+    file-path: './datasets/sentieon_samples.csv'
+    overwrite: True
+  - name: 'viralrecon_illumina_samples'
+    description: 'Samplesheet containing links to minimal Illumina data required to test the nf-core/viralrecon pipeline (v2.5) from end-to-end.\nFurther information about how the dataset was created can be obtained via the link below:\nhttps://github.com/nf-core/test-datasets/tree/viralrecon#content-of-this-repository'
+    header: true
+    workspace: 'seqerakit-e2e/showcase'
+    file-path: './datasets/viralrecon_illumina_samples.csv'
+    overwrite: True
+  - name: 'viralrecon_nanopore_samples'
+    description: 'Samplesheet containing links to minimal Nanopore metadata required to test the nf-core/viralrecon pipeline (v2.5) from end-to-end.'
+    header: true
+    workspace: 'seqerakit-e2e/showcase'
+    file-path: './datasets/viralrecon_nanopore_samples.csv'
+    overwrite: True
+  - name: 'proteinfold_sequences'
+    description: 'Samplesheet containing links to fasta files required to test the nf-core/proteinfold pipeline from end-to-end.'
+    header: true
+    workspace: 'seqerakit-e2e/showcase'
+    file-path: './datasets/proteinfold_sequences.csv'
+    overwrite: True
+  - name: 'SRP459762-carcinoma-sra-ids'
+    description: 'Immunological subtyping of salivary gland cancer identifies histological origin-specific tumor immune microenvironment SRA: SRP459762\nBioProject: PRJNA1014965'
+    header: true
+    workspace: 'seqerakit-e2e/showcase'
+    file-path: './datasets/SRP459762-carcinoma-sra-ids.csv'
+    overwrite: True
+  - name: 'SRP459762-carcinoma-samplesheet'
+    description: 'Samplesheet containing SRA IDs required to test the nf-core/rnaseq pipeline (v3.10) from end-to-end.\nFurther information about how the dataset was created can be obtained via the link below:\nhttps://github.com/nf-core/test-datasets/tree/rnaseq#minimal-test-dataset-origin'
+    header: true
+    workspace: 'seqerakit-e2e/showcase'
+    file-path: './datasets/SRP459762-carcinoma-samplesheet.csv'
+    overwrite: True
+pipelines:
+  - name: 'hello'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_aws_ireland_fusionv2_nvme'
+    file-path: './pipelines/hello.json'
+    overwrite: True
+  - name: 'nf-core-proteinfold'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_aws_ireland_fusionv2_nvme_gpu'
+    file-path: './pipelines/nf-core-proteinfold.json'
+    overwrite: True
+  - name: 'nf-core-rnaseq'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_aws_ireland_fusionv2_nvme'
+    file-path: './pipelines/nf-core-rnaseq.json'
+    overwrite: True
+  - name: 'nf-core-sarek'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_aws_ireland_fusionv2_nvme'
+    file-path: './pipelines/nf-core-sarek.json'
+    overwrite: True
+  - name: 'nf-dragen'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_aws_ireland_dragen'
+    file-path: './pipelines/nf-dragen.json'
+    overwrite: True
+  - name: 'nf-sentieon'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_aws_ireland_fusionv2_nvme'
+    file-path: './pipelines/nf-sentieon.json'
+    overwrite: True
+  - name: 'nf-core-viralrecon-illumina'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_gcp_finland'
+    file-path: './pipelines/nf-core-viralrecon-illumina.json'
+    overwrite: True
+  - name: 'nf-core-viralrecon-nanopore'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_gcp_finland'
+    file-path: './pipelines/nf-core-viralrecon-nanopore.json'
+    overwrite: True
+  - name: 'nf-core-fetchngs'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_aws_ireland_fusionv2_nvme'
+    file-path: './pipelines/nf-core-fetchngs.json'
+    overwrite: True
+  - name: 'nf-core-rnaseq-human'
+    workspace: 'seqerakit-e2e/showcase'
+    compute-envs: 'seqera_aws_ireland_fusionv2_nvme'
+    file-path: './pipelines/nf-core-rnaseq-human.json'
+    overwrite: True

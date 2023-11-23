@@ -1,0 +1,16 @@
+{
+  "description": "",
+  "launch": {
+    "pipeline": "https://github.com/nf-core/proteinfold",
+    "revision": "1.0.0",
+    "configProfiles": [],
+    "userSecrets": [],
+    "workspaceSecrets": [],
+    "configText": "process {\n    withName: 'RUN_ALPHAFOLD2|RUN_ALPHAFOLD2_PRED|COLABFOLD_BATCH' {\n        accelerator = 1\n        queue = 'TowerForge-5ZfzTbavbsB9Tx7YRr2ut0-work'\n    }\n}",
+    "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/5Ig3IWRgjlgVjpURNF6CSN/v/1/n/samplesheet.csv'\noutdir: 's3://seqeralabs-showcase/nf-core-proteinfold/db'\nuse_gpu: true",
+    "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
+    "resume": false,
+    "pullLatest": false,
+    "stubRun": false
+  }
+}
