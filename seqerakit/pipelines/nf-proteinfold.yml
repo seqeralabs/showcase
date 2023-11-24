@@ -1,0 +1,26 @@
+pipelines:
+  - name: "nf-core-proteinfold"
+    url: "https://github.com/nf-core/proteinfold"
+    description: "Protein 3D structure prediction pipeline."
+    workspace: "seqeralabs/showcase"
+    compute-envs: "seqera_aws_ireland_fusionv2_nvme_gpu"
+    revision: "1.0.0"
+    profile: "test_full"
+    labels: ["gpu", "structure-prediction"]
+    pre-run: "./pre-run.sh"
+    params-file: "./nf-core-proteinfold-params.yml"
+    config: "./nf-core-proteinfold.config"
+    overwrite: False
+  - name: "nf-core-proteinfold_full_db"
+    url: "https://github.com/nf-core/proteinfold"
+    description: "Protein 3D structure prediction pipeline."
+    workspace: "seqeralabs/showcase"
+    compute-envs: "seqera_aws_ireland_fusionv2_nvme_gpu"
+    revision: "1.0.0"
+    labels: ["gpu", "structure-prediction"]
+    pre-run: "./pre-run.sh"
+    config: "./nf-core-proteinfold.config"
+    params:
+      outdir: "s3://seqeralabs-showcase/nf-core-proteinfold/db"
+      use_gpu: true
+    overwrite: False

@@ -1,0 +1,13 @@
+pipelines:
+  - name: "nf-sentieon"
+    url: "https://github.com/seqeralabs/nf-sentieon"
+    description: 'Proof-of-concept Nextflow pipeline to run Sentieon software.\nhttps://www.sentieon.com/'
+    workspace: "seqeralabs/showcase"
+    compute-envs: "seqera_aws_ireland_fusionv2_nvme"
+    revision: "master"
+    profile: "test"
+    labels: ["variant-calling", "wgs"]
+    pre-run: "./pre-run.sh"
+    params:
+      outdir: "s3://seqeralabs-showcase/nf-sentieon/results"
+    overwrite: False

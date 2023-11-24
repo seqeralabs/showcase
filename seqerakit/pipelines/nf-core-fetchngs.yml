@@ -1,0 +1,15 @@
+pipelines:
+  - name: "nf-core-fetchngs"
+    description: "Pipeline to fetch metadata and raw FastQ files from public and private databases"
+    url: "https://github.com/nf-core/fetchngs"
+    workspace: "seqeralabs/showcase"
+    compute-envs: "seqera_aws_ireland_fusionv2_nvme"
+    revision: "1.10.1"
+    profile: "test"
+    labels: ["download", "ena", "sra"]
+    pre-run: "./pre-run.sh"
+    params:
+      outdir: "s3://seqeralabs-showcase/nf-core-fetchngs/results"
+      force_sratools_download: True
+      nf_core_pipeline: "rnaseq"
+    overwrite: False
