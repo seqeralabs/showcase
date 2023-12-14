@@ -1,0 +1,9 @@
+pipelines:
+  - name: "hello"
+    description: "Classic hello world script in Nextflow language"
+    url: "https://github.com/nextflow-io/hello"
+    compute-env: "seqera_aws_ireland_fusionv2_nvme"
+    revision: "master"
+    labels: "hello-world"
+    pre-run: "./pre-run.sh"
+    overwrite: False

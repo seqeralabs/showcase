@@ -1,0 +1,7 @@
+compute-envs:
+  - name: "seqera_aws_ireland_dragen"
+    workspace: "seqeralabs/showcase"
+    credentials: "seqera_aws_management_credentials"
+    wait: "AVAILABLE"
+    file-path: "../compute-envs/seqera_aws_ireland_dragen.json"
+    overwrite: False

@@ -1,0 +1,12 @@
+pipelines:
+  - name: "nf-core-sarek"
+    url: "https://github.com/nf-core/sarek"
+    description: "Analysis pipeline to detect germline or somatic variants (pre-processing, variant calling and annotation) from WGS / targeted sequencing."
+    workspace: "seqeralabs/showcase"
+    compute-envs: "seqera_azure_virginia_fusion"
+    revision: "3.1.2"
+    profile: "test"
+    labels: ["germline", "variant-calling"]
+    pre-run: "./pre-run.sh"
+    params:
+      outdir: "az://seqeralabs-showcase/nf-core-sarek/results"

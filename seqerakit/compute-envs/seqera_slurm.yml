@@ -1,0 +1,13 @@
+compute-envs:
+  - type: slurm
+    name: "seqera_slurm"
+    workspace: "seqeralabs/showcase"
+    credentials: "seqera_slurm_credentials"
+    work-dir: "/home/ubuntu/work"
+    launch-dir: "/home/ubuntu/showcase-launchdir"
+    user-name: "ubuntu"
+    host-name: "slurm.seqera.io"
+    head-queue: "long"
+    compute-queue: "long"
+    wait: "AVAILABLE"
+    overwrite: False

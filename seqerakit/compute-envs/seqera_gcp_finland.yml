@@ -1,0 +1,13 @@
+compute-envs:
+  - type: google-batch
+    name: "seqera_gcp_finland_fusion"
+    workspace: "seqeralabs/showcase"
+    credentials: "seqera_gcp_credentials"
+    location: "europe-north1"
+    work-dir: "gs://seqeralabs-showcase-eu-north-1"
+    fusion-v2: True
+    wave: True
+    spot: True
+    boot-disk-dize: 200
+    wait: "AVAILABLE"
+    overwrite: False

@@ -1,0 +1,18 @@
+compute-envs:
+  - type: aws-batch forge
+    name: "seqera_aws_ireland_s3"
+    workspace: "seqeralabs/showcase"
+    credentials: "seqera_aws_development_credentials"
+    region: "eu-west-1"
+    work-dir: "s3://seqeralabs-showcase"
+    provisioning-model: "SPOT"
+    max-cpus: 500
+    allow-buckets:
+      [
+        "s3://ngi-igenomes",
+        "s3://nf-core-awsmegatests",
+        "s3://seqeralabs-showcase",
+      ]
+    cli-path: "/home/ec2-user/miniconda/bin/aws"
+    wait: "AVAILABLE"
+    overwrite: False

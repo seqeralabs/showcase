@@ -1,0 +1,13 @@
+datasets:
+  - name: "viralrecon_illumina_samples"
+    description: 'Samplesheet containing links to minimal Illumina data required to test the nf-core/viralrecon pipeline (v2.5) from end-to-end.\nFurther information about how the dataset was created can be obtained via the link below:\nhttps://github.com/nf-core/test-datasets/tree/viralrecon#content-of-this-repository'
+    header: True
+    workspace: "seqerakit-e2e/showcase"
+    file-path: "../../datasets/viralrecon_illumina_samples.csv"
+    overwrite: False
+  - name: "viralrecon_nanopore_samples"
+    description: "Samplesheet containing links to minimal Nanopore metadata required to test the nf-core/viralrecon pipeline (v2.5) from end-to-end."
+    header: True
+    workspace: "seqerakit-e2e/showcase"
+    file-path: "../../datasets/viralrecon_nanopore_samples.csv"
+    overwrite: False

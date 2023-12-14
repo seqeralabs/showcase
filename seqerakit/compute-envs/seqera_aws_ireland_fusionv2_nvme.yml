@@ -1,0 +1,22 @@
+compute-envs:
+  - type: aws-batch forge
+    name: "seqera_aws_ireland_fusionv2_nvme"
+    workspace: "seqeralabs/showcase"
+    credentials: "seqera_aws_development_credentials"
+    region: "eu-west-1"
+    work-dir: "s3://seqeralabs-showcase"
+    wave: True
+    fusion-v2: True
+    fast-storage: true
+    provisioning-model: "SPOT"
+    instance-type: "c6id,m6id,r6id"
+    max-cpus: 500
+    allow-buckets:
+      [
+        "s3://ngi-igenomes",
+        "s3://nf-core-awsmegatests",
+        "s3://seqeralabs-showcase",
+      ]
+    head-job-role: "$HEAD_JOB_IAM_ROLE"
+    wait: "AVAILABLE"
+    overwrite: False

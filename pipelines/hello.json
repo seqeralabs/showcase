@@ -1,5 +1,4 @@
 {
-  "description": "Hello World test pipeline.",
   "launch": {
     "pipeline": "https://github.com/nextflow-io/hello",
     "revision": "master",
@@ -9,6 +8,8 @@
     "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
     "resume": false,
     "pullLatest": false,
-    "stubRun": false
+    "stubRun": false,
+    "optimizationId": "erHSZqVJNxKlWbuL",
+    "optimizationTargets": ""
   }
 }

@@ -1,0 +1,14 @@
+pipelines:
+  - name: "nf-dragen"
+    description: "Proof-of-concept Nextflow pipeline to run Illumina DRAGEN software."
+    url: "https://github.com/seqera-labs/nf-dragen"
+    workspace: "seqeralabs/showcase"
+    compute-envs: "seqera_aws_ireland_dragen"
+    revision: "master"
+    profile: "test"
+    labels: ["fpga", "variant-calling"]
+    pre-run: "./pre-run.sh"
+    params:
+      outdir: "s3://nf-tower-bucket/nf-dragen/results"
+    workspace-secrets: ["DRAGEN_PASSWORD", "DRAGEN_USERNAME"]
+    overwrite: False
