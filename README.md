@@ -84,7 +84,7 @@ Please refer to the package's [installation guide](docs/installation.md) for mor
 
 #### Running `seqerakit`
 
-Similar to executing the scripts above to import and create Pipelines, Compute Environments, and Datasets that are defined in JSON onto Seqera Platform, the [YAML files](#using-seqerakit) provided in this repository can also be used create `seqeralabs/showcase` entities on the Platform. For example:
+Similar to executing the scripts above to import and create Pipelines, Compute Environments, and Datasets that are defined in JSON onto Seqera Platform, the [YAML files](#using-seqerakit) provided in this repository can also be used to create `seqeralabs/showcase` entities on the Platform. For example:
 
 To create the Compute Environments:
 
