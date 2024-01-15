@@ -2,7 +2,7 @@
 
 ## Infrastructure as code
 
-Infrastructure as Code (IaC) provides the ability to provision and manage infrastructure through configuration files. Having IaC enables automation in set up, cconsistency and standardization in infrastructure, and documentation of how resources are configured.
+Infrastructure as Code (IaC) provides the ability to provision and manage infrastructure through configuration files. Having IaC enables automation in set up, consistency and standardization in infrastructure, and documentation of how resources are configured.
 
 This guide describes how to create resources on Seqera Platform through IaC using two methods: (1) Seqera Platform CLI, and (2) seqerakit.
 
