@@ -80,7 +80,7 @@ Or:
 pip install seqerakit
 ```
 
-Please refer to the package's [installation guide](docs/installation.md) for more details on the required dependencies.
+Please refer to the package's [installation guide](https://github.com/seqeralabs/seqera-kit?tab=readme-ov-file#installation) for more details on the required dependencies.
 
 #### Running `seqerakit`
 
