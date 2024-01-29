@@ -6,10 +6,12 @@ When a run completes successfully, an optimized profile is created. This profile
 
 Navigate back to the Launchpad, click on the nf-core/rnaseq Pipeline added, and click on the 'Lightbulb' icon to view the optimized profile.
 
-![Optimized configuration](docs/images/optimize-configuration.gif)
+![Optimized configuration](assets/optimize-configuration.gif)
 
 You can verify the optimized configuration of a given run by inspecting the resource usage plots for that run and these fields in the run's task table:
 
-CPU usage: pcpu
-Memory usage: peakRss
-Runtime: start and complete
+| Description   | Key                       |
+|---------------|---------------------------|
+| CPU usage     | `pcpu`                    |
+| Memory usage  | `peakRss`                 |
+| Runtime       | `start` and `complete`    |

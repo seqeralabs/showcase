@@ -8,7 +8,7 @@ With Data Explorer, you can browse and interact with remote data repositories fr
   To view bucket details such as the cloud provider, bucket address, and credentials, select the information icon next to a bucket in the Data Explorer list.
 
 - Search and filter buckets
-  Search for buckets by name and region (e.g., region:eu-west-2) in the search field, and filter by provider.
+  Search for buckets by name and region (e.g., `region:eu-west-2`) in the search field, and filter by provider.
 
 - Hide buckets from list view
   Workspace maintainers can hide buckets from the Data Explorer list view. Select multiple buckets, then select Hide in the Data Explorer toolbar. To hide buckets individually, select Hide from the options menu of a bucket in the list.
@@ -30,4 +30,4 @@ From the View cloud bucket page, you can:
 1. Preview and download files: Select the download icon in the 'Actions' column to download a file directly from the list view. Select a file to open a preview window that includes a Download button.
 2. Copy bucket/object paths: Select the Path of an object on the cloud bucket page to copy its absolute path to the clipboard. Use these object paths to specify input data locations during pipeline launch, or add them to a dataset for pipeline input.
 
-![Data Explorer bucket](docs/images/sp-cloud-data-explorer.gif)
+![Data Explorer bucket](assets/sp-cloud-data-explorer.gif)

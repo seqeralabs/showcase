@@ -6,7 +6,7 @@ Navigate back to the Launchpad to being executing the newly added nf-core/rnaseq
 
 Select 'Launch' next to the pipeline of your choice to open the pipeline launch form.
 
-![Launching a Pipeline](docs/images/sp-cloud-launch-form.gif)
+![Launching a Pipeline](assets/sp-cloud-launch-form.gif)
 
 Seqera uses a [nextflow_schema.json](https://github.com/nf-core/rnaseq/blob/master/nextflow_schema.json) file in the root of the pipeline repository to dynamically create a form with the necessary pipeline parameters.
 
@@ -22,10 +22,10 @@ All pipelines contain at least these parameters:
 
 For the 'input' parameter, click on the text box and click on the name of the dataset added in the previous step.
 
-![Input parameters](docs/images/sp-cloud-launch-parameters-input.gif)
+![Input parameters](assets/sp-cloud-launch-parameters-input.gif)
 
 For the 'outdir' parameter, specify an S3 directory path manually, or select Browse to specify a cloud storage directory using Data Explorer.
 
-![Output parameters](docs/images/sp-cloud-launch-parameters-outdir.gif)
+![Output parameters](assets/sp-cloud-launch-parameters-outdir.gif)
 
 The remaining fields of the pipeline parameters form will vary for each pipeline, dependent on the parameters specified in the pipeline schema. When you have filled the necessary launch form details, select 'Launch'.

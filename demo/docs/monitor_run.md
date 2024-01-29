@@ -4,14 +4,14 @@ Upon launching, you'll be navigated to the 'Runs' tab which contains all execute
 
 The Runs tab contains all previous job executions. Each new or resumed job is given a random name, e.g., "grave_williams". Each row corresponds to a specific job. As a job executes, it can transition through the following states:
 
-submitted: Pending execution
-running: Running
-succeeded: Completed successfully
-failed: Successfully executed, where at least one task failed with a terminate error strategy
-cancelled: Stopped forceably during execution
+- **submitted**: Pending execution
+- **running**: Running
+- **succeeded**: Completed successfully
+- **failed**: Successfully executed, where at least one task failed with a terminate error strategy
+- **cancelled**: Stopped forceably during execution
 unknown: Indeterminate status
 
-![Viewing Runs](docs/images/sp-cloud-view-all-runs.gif)
+![Viewing Runs](assets/sp-cloud-view-all-runs.gif)
 
 As the pipeline begins to run, you will see the Runs page become populated with the following details:
 
@@ -21,13 +21,13 @@ As the pipeline begins to run, you will see the Runs page become populated with 
 - Execution Log
 - Datasets used, and Reports generated
 
-![View the rnaseq run](docs/images/sp-cloud-run-info.gif)
+![View the rnaseq run](assets/sp-cloud-run-info.gif)
 
 ## 1. View Run info
 
 On the Runs page will be General information about who executed the run, when, the Git hash used and tag, as well as additional details about the compute environment used, and the version of Nextflow.
 
-![General run information](docs/images/general-run-details.gif)
+![General run information](assets/general-run-details.gif)
 
 ## 2. View Reports
 
@@ -37,6 +37,6 @@ Reports allow you to directly visualise supported file types or to download them
 
 For example, for the nf-core/rnaseq pipeline, you can view the MultiQC report generated.
 
-![Reports tab](docs/images/reports-tab.png)
+![Reports tab](assets/reports-tab.png)
 
-![Reports MultiQC preview](docs/images/reports-preview.png)
+![Reports MultiQC preview](assets/reports-preview.png)

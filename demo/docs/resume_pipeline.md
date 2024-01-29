@@ -6,9 +6,9 @@ Seqera Platform enables you to use Nextflow's resume functionality to resume a w
 
 Users with appropriate permissions can change the compute environment when resuming a run. The new compute environment must have access to the original run work directory.
 
-This means that the new compute environment must have a work directory that matches the root path of the original pipeline work directory. For example, if the original pipeline work directory is s3://foo/work/12345, the new compute environment must have access to s3://foo/work.
+This means that the new compute environment must have a work directory that matches the root path of the original pipeline work directory. For example, if the original pipeline work directory is `s3://foo/work/12345`, the new compute environment must have access to `s3://foo/work`.
 
-![Resuming a run](docs/images/sp-cloud-resume-a-run.gif)
+![Resuming a run](assets/sp-cloud-resume-a-run.gif)
 
 ## 2. Task Status and Cached Processes
 
@@ -16,4 +16,4 @@ The Runs page for a workflow will display the status of tasks in real time as th
 
 If you are resuming a run that had tasks that were completed successfully, you will see a number of tasks shown as 'Cached'.
 
-![Cached processes](docs/images/sp-cloud-cached-processes.gif)
+![Cached processes](assets/sp-cloud-cached-processes.gif)
