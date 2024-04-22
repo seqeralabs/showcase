@@ -45,13 +45,11 @@ The About tab provides the following information:
 
 8. **Resources used**: Metrics for the resources used by the task
 
-
 ![Task details window](assets/task-details.gif)
 
 **Execution log**
 
 The Execution log tab provides a real-time log of the selected task's execution. Task execution and other logs (such as stdout and stderr) are available for download from here, if still available in your compute environment.
-
 
 ## 4. Task details in Data Explorer
 

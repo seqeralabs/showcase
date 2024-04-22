@@ -10,8 +10,8 @@ Navigate back to the Launchpad, click on the nf-core/rnaseq Pipeline added, and 
 
 You can verify the optimized configuration of a given run by inspecting the resource usage plots for that run and these fields in the run's task table:
 
-| Description   | Key                       |
-|---------------|---------------------------|
-| CPU usage     | `pcpu`                    |
-| Memory usage  | `peakRss`                 |
-| Runtime       | `start` and `complete`    |
+| Description  | Key                    |
+| ------------ | ---------------------- |
+| CPU usage    | `pcpu`                 |
+| Memory usage | `peakRss`              |
+| Runtime      | `start` and `complete` |

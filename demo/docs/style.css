@@ -1,29 +1,30 @@
-.md-typeset h1, .md-typeset h2, .md-typeset h3 {
-    color: #000;
-    font-weight: 600;
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: #000;
+  font-weight: 600;
 }
 
-.left{
-    float: left;
+.left {
+  float: left;
 }
 
-.right{
-    float: right;
-    width: 40%;
+.right {
+  float: right;
+  width: 40%;
 }
 
 .md-footer {
-    margin-top: 40px;
-    background-color: #009485;
+  margin-top: 40px;
+  background-color: #009485;
 }
 
 .md-footer__inner {
-    display: none !important;
+  display: none !important;
 }
 
-
 @media (max-width: 600px) {
-    .image  {
-        display:none;
-    }
+  .image {
+    display: none;
+  }
 }

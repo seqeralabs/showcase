@@ -11,6 +11,7 @@ When running pipelines on the Cloud, this samplesheet has to be made available i
 The [nf-core/rnaseq](https://github.com/nf-core/rnaseq) pipeline works with input datasets (samplesheets) containing sample names, fastq file locations, and indications of strandedness. The Seqera Community Showcase sample dataset for _nf-core/rnaseq_ looks like this:
 
 **Example rnaseq dataset**
+
 <center>
 
 | sample              | fastq_1                              | fastq_2                              | strandedness |

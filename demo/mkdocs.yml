@@ -2,6 +2,7 @@ site_name: Seqera Platform Showcase Demonstration Docs
 
 theme:
   name: material
+  logo: assets/logo.svg
   features:
     - content.tooltips
     - navigation.footer
@@ -41,12 +42,16 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Showcase Demonstration:
+    - Why use Seqera Platform?: intro.md
     - Getting started: demo_overview.md
     - Add a Pipeline: add_a_pipeline.md
     - Add a Dataset: add_a_dataset.md
     - Launch Pipeline: launch_pipeline.md
     - Monitor a Run: monitor_run.md
+    - Monitoring views: monitoring_views.md
     - View Run Details: run_details.md
     - Resume a Pipeline: resume_pipeline.md
     - Data Explorer: data_explorer.md
+    - Data Studios: data_studios.md
     - Optimize your Pipeline: pipeline_optimization.md
+    - Automation on Seqera Platform: automation.md

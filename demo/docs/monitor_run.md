@@ -9,7 +9,7 @@ The Runs tab contains all previous job executions. Each new or resumed job is gi
 - **succeeded**: Completed successfully
 - **failed**: Successfully executed, where at least one task failed with a terminate error strategy
 - **cancelled**: Stopped forceably during execution
-unknown: Indeterminate status
+  unknown: Indeterminate status
 
 ![Viewing Runs](assets/sp-cloud-view-all-runs.gif)
 

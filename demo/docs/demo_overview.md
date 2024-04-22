@@ -14,5 +14,14 @@ Navigate into the `seqeralabs/showcase` Workspace.
 
 ![Seqera Labs Showcase Workspace](assets/go-to-workspace.gif)
 
-### 3. TODO User settings
+### 3. User settings
 
+To access or modify your user settings such as your username, or name, click on the avatar icon in the top right corner. You will be able to modify these settings in 'Your profile'.
+
+![User settings](./assets/user-settings.png){ .right .image}
+
+You can specify user specific settings such as:
+
+- **User tokens**: Your personal access token for authentication on the Platform, used in [automation](./automation.md).
+- **User credentials**: Credentials for your own personal workspace which can include cloud access keys, repository credentials, Docker credentials.
+- **User secrets**: Secrets used in any Nextflow workflows launched in your user workspace.
