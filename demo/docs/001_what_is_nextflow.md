@@ -15,7 +15,7 @@ Monitoring and launching workflows via the Nextflow CLI, though direct, poses ch
 
 - **Scalability**: As the number of tasks increases, manually checking individual log files becomes impractical.
 
-- **Real-Time Tracking**: The CLI does not offer an easy way to visualize real-time progress across multiple parallel tasks.
+- **Real-time tracking**: The CLI does not offer an easy way to visualize real-time progress across multiple parallel tasks.
 
 - **Aggregation**: Collecting and interpreting logs from various processes requires additional tools or scripts, complicating the workflow management.
 

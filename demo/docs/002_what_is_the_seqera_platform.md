@@ -15,15 +15,15 @@ The Seqera Platform helps organizations:
 - Easily access libraries of production-proven Nextflow community pipelines available from [nf-core](https://nf-co.re/)
 - Automate complex tasks as part of broader enterprise processes
 
-## Deployment Methods
+## Deployment methods
 
 Seqera offers two deployment methods:
 
 - **Seqera Cloud**: A version of the application available as a SaaS solution, hosted on Seqera's infrastructure.
-- **Seqera Enterprise**: A lightweight, deployable version of the application that can be hosted on our customers infrastructure.
+- **Seqera Enterprise**: A lightweight, deployable version of the application that can be hosted on our customers' infrastructure.
 
 ## Core components
 
-The Platform consists of three main architectural components: a backend container, a frontend container, and a database that stores all of the data required by the application. The frontend container communicates with the backend container and database via API calls. As a result, all features and activities available through the user interface can also be accessed programmatically via the Seqera Platform API. For more information, please refer to the [Automation](./014_automation_on_the_seqera_platform.md) section later in the walkthrough.
+The Platform consists of three main architectural components: a backend container, a frontend container, and a database that stores all of the data required by the application. The frontend container communicates with the backend container and database via API calls. As a result, all features and activities available through the user interface can also be accessed programmatically via the Seqera Platform API. For more information, see the [Automation](./014_automation_on_the_seqera_platform.md) section later in the walkthrough.
 
 This walkthrough will demonstrate the various features of the Seqera Platform which makes it easier to build, launch, and manage scalable data pipelines.

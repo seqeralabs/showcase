@@ -10,11 +10,11 @@ Every pipeline comes with curated test data, so you can import into Seqera Platf
 ![Seqera Pipelines Overview](assets/seqera-pipelines-overview.gif)
 ///
 
-The pipeline details page provides key information about the workflow. Within one-click, you can add pipelines to your launchpad within Seqera Platform.
+The pipeline details page provides key information about the workflow. With one click, you can add pipelines to your Seqera Platform Launchpad.
 
 Simply click the 'Launch' button, specify whether you would like to add the pipeline to a Cloud or Enterprise instance, and provide your user access token for the Platform.
 
-You can then select for the Orgaization, Workspace, and Compute Environment for the pipeline. 
+You can then select the orgaization, workspace, and compute environment for the pipeline. 
 
 /// details | Click to show animation
     type: example
