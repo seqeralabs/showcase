@@ -100,18 +100,18 @@ markdown_extensions:
   - pymdownx.blocks.html:
 
 nav:
-  - Showcase Demonstration:
-      - Getting Started: index.md
+  - Showcase demonstration:
+      - Getting started: index.md
       - What is Nextflow?: 001_what_is_nextflow.md
       - What is the Seqera Platform?: 002_what_is_the_seqera_platform.md
-      - Accessing the Platform: 003_accessing_the_platform.md
-      - Launching pipelines: 004_launching_pipelines.md
-      - Monitoring runs: 007_monitoring_runs.md
-      - Viewing run information: 008_viewing_run_information.md
-      - Optimizing pipelines: 009_optimizing_pipelines.md
-      - Using Data Explorer: 010_using_data_explorer.md
-      - Tertiary Analysis in Data Studios: 011_tertiary_analysis_data_studios.md
-      - Setting up a Data Studio: 012_setting_up_data_studio.md
+      - Access the Platform: 003_accessing_the_platform.md
+      - Launch pipelines: 004_launching_pipelines.md
+      - Monitor runs: 007_monitoring_runs.md
+      - View run information: 008_viewing_run_information.md
+      - Optimize pipelines: 009_optimizing_pipelines.md
+      - Use Data Explorer: 010_using_data_explorer.md
+      - Tertiary analysis in Data Studios: 011_tertiary_analysis_data_studios.md
+      - Set up a Data Studio: 012_setting_up_data_studio.md
       - Automation on the Seqera Platform: 014_automation_on_the_seqera_platform.md
       - Seqera Pipelines: 015_seqera_pipelines.md
       - Seqera Containers: 016_seqera_containers.md

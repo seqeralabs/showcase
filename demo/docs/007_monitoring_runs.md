@@ -1,20 +1,20 @@
 
-There are several ways to monitor run executions within the Seqera Platform.
+There are several ways to monitor run executions in Seqera Platform.
 
 ## 1. Workspace view
 
-A full history of all pipelines executions within a given Workspace can be accessed via the Runs tab:
+A full history of all pipeline executions within a given workspace can be accessed via the **Runs** tab:
 
 
 /// details | Click to show animation
     type: example
     
-![Viewing Runs](assets/sp-cloud-view-all-runs.gif)
+![View runs](assets/sp-cloud-view-all-runs.gif)
 ///
 
 ## 2. All runs view
 
-The **All runs** page can be accessed from the user menu on the top right of the interface. This page provides a comprehensive overview of the runs across the entire Platform instance. The default view will be all Organizations and Workspaces accessible by a given user. However, you can select the visible Workspaces by clicking on the dropdown next to **View**, and filter for a particular set of runs using any of the following fields:
+Access the **All runs** page from the user menu in the top right of the interface. This page provides a comprehensive overview of the runs across the entire Platform instance. The default view will be all organizations and workspaces accessible to the user. However, you can select visible workspaces from the dropdown next to **View**, and filter for a particular set of runs using any of the following fields:
 
 - `status`
 - `label`
@@ -42,7 +42,7 @@ rnaseq username:johndoe status:succeeded after:2024-01-01
 
 ## 3. Dashboard view
 
-The **Dashboard** page can be accessed from the user menu on the top right of the interface. This page provides an overview of the total runs that are currently submitted, running, or have failed. This page provides a comprehensive overview of the runs across the entire Platform instance. The default view will be all Organizations and Workspaces accessible by a given user. However, you can select the visible Workspaces by clicking on the dropdown next to **View**, and filter by time, including a custom date range up to 12 months. You can also export this data in CSV format by clicking the **Export data** button.
+Access the **Dashboard** from the user menu in the top right of the interface. This page provides an overview of the total runs across the Platform instance that are currently submitted, running, or have failed. The default view will be all organizations and workspaces accessible to the user. However, you can select visible workspaces from the dropdown next to **View**, and filter by time, including a custom date range up to 12 months. You can also select **Export data** to download a CSV file with all the available export data.
 
 
 /// details | Click to show animation

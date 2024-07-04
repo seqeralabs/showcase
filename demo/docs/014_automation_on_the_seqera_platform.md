@@ -1,10 +1,10 @@
-Seqera Platform provides multiple methods of programmatic interaction allowing you to automate execution of pipelines, chain pipelines together, and integrate the Platform into third-party services of your choosing.
+Seqera Platform provides multiple methods of programmatic interaction allowing you to automate the execution of pipelines, chain pipelines together, and integrate the Platform into third-party services of your choosing.
 
 ### 1. Seqera Platform API
 
-The Seqera Platform public API is the lowest-level method of programmatic interaction. All features available on the user interface can be achieved through the API. 
+The Seqera Platform public API is the lowest-level method of programmatic interaction. All operations available in the user interface can be achieved through the API. 
 
-The API can be used to trigger the Launch of pipelines based on a file event (i.e. upload of a file to a bucket) or completion of a previous run.
+The API can be used to trigger the launch of pipelines based on a file event (such as the upload of a file to a bucket) or completion of a previous run.
 
 The API can be accessed from `https://api.cloud.seqera.io`.
 
@@ -48,11 +48,11 @@ For an example of how to use the API to launch a pipeline, we can make the follo
 
 For bioinformaticians and scientists more comfortable with the CLI, Seqera Platform also comes with a command line utility called `tw` to manage resources. 
 
-The CLI provides an interface to launch pipelines, manage compute environments, retrieve run metadata and monitor runs on the Platform. It provides a Nextflow-like experience for bioinformaticians who prefer the CLI, allows you store Seqera resource configuration (i.e. pipelines, compute environments) as code. The CLI is built on top of the [Seqera Platform API](#1-seqera-platform-api) but offers is simpler to use than the API. For example, you can refer to resources by name instead of unique identifier.
+The CLI provides an interface to launch pipelines, manage compute environments, retrieve run metadata, and monitor runs on Platform. It provides a Nextflow-like experience for bioinformaticians who prefer the CLI and allows you store Seqera resource configuration (pipelines, compute environments, etc.) as code. The CLI is built on top of the [Seqera Platform API](#1-seqera-platform-api) but is simpler to use. For example, you can refer to resources by name instead of their unique identifier.
 
 ![Seqera Platform CLI](./assets/platform-cli.png)
 
-The `tw` CLI installation and usage details can be obtained from [this](https://github.com/seqeralabs/tower-cli/) Github repository.
+See the [CLI GitHub repository](https://github.com/seqeralabs/tower-cli/) for installation and usage details.
 
 
 /// details | Advanced
@@ -65,15 +65,15 @@ For example, to launch the hello pipeline using the CLI:
 
 ### 3. seqerakit
 
-`seqerakit` is a Python wrapper for the Seqera Platform CLI which can be leveraged to automate the creation of all of the entities in Seqera Platform via YAML format configuration file. It can be used to automate creation of entities (i.e. Organization, Workspace to Pipelines and Launching) in one YAML.
+`seqerakit` is a Python wrapper for the Seqera Platform CLI which can be leveraged to automate the creation of all of the entities in Seqera Platform via a YAML format configuration file. It can be used to automate the creation of entities, from organizations and workspaces to pipelines and compute environments, and the execution of workflows in one YAML.
 
 The key features are:
 
-- **Simple configuration**: All of the command-line options available when using the Seqera Platform CLI can be defined in simple YAML format.
+- **Simple configuration**: All of the command-line options available in the Seqera Platform CLI can be defined in simple YAML format.
 - **Infrastructure as Code**: Enable users to manage and provision their infrastructure specifications.
-- **Automation**: End-to-end creation of entities within Seqera Platform, all the way from adding an Organization to launching pipeline(s) within that Organization.
+- **Automation**: End-to-end creation of entities within Seqera Platform, from adding an organization to launching pipeline(s) within that organization.
 
-The `seqerakit` installation and usage details are available on [this](https://github.com/seqeralabs/seqera-kit/) Github repository.
+See the [seqerakit GitHub repository](https://github.com/seqeralabs/seqera-kit/) for installation and usage details.
 
 
 /// details | Advanced
@@ -93,6 +93,6 @@ Then run seqerakit with:
 ///
 
 ## Resources
-A common use-case for using the automation methods above is to automatically execute a pipeline as data arrives off a sequencer or integrating Seqera Platform into a broader customer facing application. For a step-by-step guide on setting up this kind of **Workflow Automation on Seqera Platform**, take a look at [this blog post](https://seqera.io/blog/workflow-automation/).
+Common use cases for the automation methods above include automatically executing a pipeline as data arrives from a sequencer, or integrating Seqera Platform into a broader customer facing application. For a step-by-step guide to set up these automation methods, see [Workflow automation for Nextflow pipelines](https://seqera.io/blog/workflow-automation/).
 
-For examples on how to use the above methods for chaining workflows together, take a look at [this blog post](https://seqera.io/blog/automating-workflows-with-nextflow-and-tower/) on **Automating workflows with Seqera Platform**.
+For examples on how to use automation to chain workflows together, see [Automating pipeline execution with Nextflow and Tower](https://seqera.io/blog/automating-workflows-with-nextflow-and-tower/).
