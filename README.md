@@ -1,5 +1,9 @@
 # `seqeralabs/showcase` Workspace on Seqera Platform
 
+## Overview
+
+This repository contains updated demonstration documentation and Infrastructure as Code (IaC) scripts for deploying and managing infrastructure in the `seqeralabs/showcase` workspace on Seqera Platform.
+
 ## Infrastructure as code
 
 Infrastructure as Code (IaC) provides the ability to provision and manage infrastructure through configuration files. Having IaC enables automation in set up, consistency and standardization in infrastructure, and documentation of how resources are configured.
@@ -105,3 +109,15 @@ seqerakit seqerakit/pipelines/*
 ```
 
 See the [seqerakit documentation](https://github.com/seqeralabs/seqera-kit#-seqerakit) for more usage examples and options for running `seqerakit`.
+
+## Showcase Demonstration
+
+This guide provides a walkthrough of a standard Seqera Platform demonstration using the `seqeralabs/showcase` workspace. The demonstration will describe how to add and run a pipeline in the Platform, examine the run details, and highlight key features such as pipeline optimization, Data Explorer, and Data Studios.
+
+The demonstration will focus on using the [nf-core/rnaseq](https://github.com/nf-core/rnaseq) pipeline as an example to execute a Nextflow pipeline on Seqera Cloud using the AWS Batch cloud executor.
+
+You can find the updated documentation in the `demo/` directory.
+
+## Contributing
+
+We welcome contributions to further improve the documentation and IaC scripts. Please open issues or submit pull requests with your suggestions and improvements.

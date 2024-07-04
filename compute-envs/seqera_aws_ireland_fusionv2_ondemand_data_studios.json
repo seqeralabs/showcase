@@ -1,0 +1,27 @@
+{
+  "region": "eu-west-1",
+  "workDir": "s3://scidev-eu-west-1",
+  "environment": [],
+  "waveEnabled": true,
+  "fusion2Enabled": true,
+  "nvnmeStorageEnabled": true,
+  "forge": {
+    "type": "EC2",
+    "minCpus": 0,
+    "maxCpus": 512,
+    "gpuEnabled": false,
+    "instanceTypes": ["c6id", "m6id", "r6id", "g4dn"],
+    "subnets": [],
+    "securityGroups": [],
+    "disposeOnDeletion": true,
+    "allowBuckets": [
+      "s3://scidev-testing",
+      "s3://seqeralabs-showcase",
+      "s3://nextflow-summit",
+      "s3://scidev-eu-west-1"
+    ],
+    "efsCreate": false,
+    "dragenEnabled": false
+  },
+  "discriminator": "aws-batch"
+}

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WORKSPACE='seqeralabs/showcase'
-OUTDIR=/Users/eshajoshi/Development/update_showcase/ej-showcase/pipelines
+OUTDIR=../pipelines
 
 ## Overwrite pipeline JSON files if required
 OVERWRITE=false

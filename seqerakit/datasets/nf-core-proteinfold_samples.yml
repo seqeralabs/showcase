@@ -2,6 +2,6 @@ datasets:
   - name: "proteinfold_sequences"
     description: "Samplesheet containing links to fasta files required to test the nf-core/proteinfold pipeline from end-to-end."
     header: True
-    workspace: "seqerakit-e2e/showcase"
+    workspace: "seqeralabs/showcase"
     file-path: "../../datasets/proteinfold_sequences.csv"
     overwrite: False

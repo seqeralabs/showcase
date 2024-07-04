@@ -1,0 +1,7 @@
+id,variable,reference,target,blocking
+type_GM12878_K562,type,GM12878,K562,
+type_GM12878_MCF7,type,GM12878,MCF7,
+type_GM12878_H1,type,GM12878,H1,
+type_K562_MCF7,type,K562,MCF7,
+type_K562_H1,type,K562,H1,
+type_MCF7_H1,type,MCF7,H1,

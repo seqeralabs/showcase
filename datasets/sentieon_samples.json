@@ -1,7 +1,0 @@
-{
-  "dataset": {
-    "name": "sentieon_samples",
-    "description": "Samplesheet containing links to minimal data required to test the seqeralabs/nf-sentieon pipeline from end-to-end.",
-    "mediaType": "text/csv"
-  }
-}

@@ -2,6 +2,6 @@ datasets:
   - name: "SRP459762-carcinoma-sra-ids"
     description: 'Immunological subtyping of salivary gland cancer identifies histological origin-specific tumor immune microenvironment SRA: SRP459762\nBioProject: PRJNA1014965'
     header: True
-    workspace: "seqerakit-e2e/showcase"
+    workspace: "seqeralabs/showcase"
     file-path: "../../datasets/SRP459762-carcinoma-sra-ids.csv"
     overwrite: False

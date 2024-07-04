@@ -1,0 +1,13 @@
+datasets:
+  - name: "differentialabundance_samples"
+    description: "Samplesheet containing information about RNAseq samples used in the test-full experiment."
+    header: True
+    workspace: "seqeralabs/showcase"
+    file-path: "../../datasets/differentialabundance_samples.csv"
+    overwrite: False
+  - name: "differentialabundance_contrasts"
+    description: "File containing information about RNAseq sample contrasts to be used."
+    header: True
+    workspace: "seqeralabs/showcase"
+    file-path: "../../datasets/differentialabundance_contrasts.csv"
+    overwrite: False
