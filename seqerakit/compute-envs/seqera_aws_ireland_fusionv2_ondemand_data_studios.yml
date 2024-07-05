@@ -1,0 +1,22 @@
+compute-envs:
+  - type: aws-batch forge
+    name: "seqera_aws_ireland_fusionv2_ondemand_data_studios"
+    workspace: "seqeralabs/showcase"
+    credentials: "seqera_aws_development_credentials"
+    region: "eu-west-1"
+    work-dir: "s3://scidev-eu-west-1"
+    wave: True
+    fusion-v2: True
+    fast-storage: true
+    provisioning-model: "EC2"
+    instance-type: "c6id,m6id,r6id,g4dn"
+    max-cpus: 512
+    allow-buckets:
+      [
+        "s3://seqeralabs-showcase",
+        "s3://scidev-eu-west-1",
+        "s3://scidev-testing",
+        "s3://nextflow-summit",
+      ]
+    wait: "AVAILABLE"
+    overwrite: False

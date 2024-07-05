@@ -1,0 +1,18 @@
+{
+  "description": "Pipeline to fetch metadata and raw FastQ files from public and private databases\n\n",
+  "launch": {
+    "pipeline": "https://github.com/nf-core/fetchngs",
+    "revision": "1.10.1",
+    "configProfiles": [
+      "test"
+    ],
+    "userSecrets": [],
+    "workspaceSecrets": [],
+    "configText": "",
+    "paramsText": "outdir: 's3://seqeralabs-showcase/nf-core-fetchngs/results'\nforce_sratools_download: true\nnf_core_pipeline: 'rnaseq'",
+    "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
+    "resume": false,
+    "pullLatest": false,
+    "stubRun": false
+  }
+}

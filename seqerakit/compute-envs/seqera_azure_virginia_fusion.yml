@@ -1,0 +1,12 @@
+compute-envs:
+  - type: azure-batch forge
+    name: "seqera_azure_virginia_fusion"
+    workspace: "seqeralabs/showcase"
+    credentials: "seqera_azure_development_credentials"
+    location: "eastus"
+    work-dir: "az://azure-benchmarking"
+    fusion-v2: True
+    wave: True
+    vm-count: 1
+    vm-type: "Standard_E16d_v5"
+    registry-credentials: seqera_dockerhub_credentials

@@ -1,16 +1,15 @@
 {
-  "description": "Pipeline for assembly and intrahost/low-frequency variant calling for viral samples.",
   "launch": {
     "pipeline": "https://github.com/nf-core/viralrecon",
     "revision": "2.6.0",
-    "configProfiles": [
-      "test"
-    ],
+    "configProfiles": ["test"],
     "configText": "",
     "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/4GC5jTkiloEIYBscThIf7r/v/1/n/viralrecon-illumina-samples.csv'\noutdir: 'gs://seqeralabs-showcase-eu-north-1/nf-core-viralrecon/illumina/results'",
     "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",
     "resume": false,
     "pullLatest": false,
-    "stubRun": false
+    "stubRun": false,
+    "optimizationId": "jnQkdRdVKPsdUuNC",
+    "optimizationTargets": "pcpu, peak_rss, realtime"
   }
 }

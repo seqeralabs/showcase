@@ -1,0 +1,18 @@
+pipelines:
+  - name: "nf-core-differentialabundance"
+    description: "Pipeline for differential abundance analysis for feature/observation matrices from platforms such as RNA-seq"
+    url: "https://github.com/nf-core/differentialabundance"
+    workspace: "seqeralabs/showcase"
+    compute-envs: "seqera_aws_ireland_fusionv2_nvme"
+    revision: "dev"
+    labels: ["differential-expression", "rnaseq"]
+    pre-run: "./pre-run.sh"
+    params:
+      input: "https://api.cloud.seqera.io/workspaces/138659136604200/datasets/10eGixBTW4gj7uNNGbV71O/v/1/n/differentialabundance-samples.csv"
+      contrasts: "https://api.cloud.seqera.io/workspaces/138659136604200/datasets/3U0wERL8XdQiCNGRW6AZZ2/v/1/n/differentialabundance-contrasts.csv"
+      outdir: "s3://seqeralabs-showcase/nf-core-differentialabundance/results"
+      gtf: "s3://ngi-igenomes/igenomes/Homo_sapiens/Ensembl/GRCh37/Annotation/Genes/genes.gtf"
+      matrix: "s3://seqeralabs-showcase/nf-core-rnaseq-testfull/results/star_salmon/salmon.merged.gene_counts.tsv"
+      transcript_length_matrix": "s3://seqeralabs-showcase/nf-core-rnaseq-testfull/results/star_salmon/salmon.merged.gene_lengths.tsv"
+      deseq2_vs_method: "rlog"
+    overwrite: False

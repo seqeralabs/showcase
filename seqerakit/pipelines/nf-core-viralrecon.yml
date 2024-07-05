@@ -1,0 +1,25 @@
+pipelines:
+  - name: "nf-core-viralrecon-illumina"
+    url: "https://github.com/nf-core/viralrecon"
+    description: "Assembly and intrahost/low-frequency variant calling for viral samples."
+    workspace: "seqeralabs/showcase"
+    compute-envs: "seqera_gcp_finland_fusion"
+    revision: "2.6.0"
+    profile: "test"
+    labels: ["illumina", "sars-cov-2"]
+    params:
+      outdir: "gs://seqeralabs-showcase-eu-north-1/nf-core-viralrecon/illumina/results"
+      assemblers: "spades,unicycler"
+    overwrite: False
+  - name: "nf-core-viralrecon-nanopore"
+    url: "https://github.com/nf-core/viralrecon"
+    description: "Assembly and intrahost/low-frequency variant calling for viral samples."
+    workspace: "seqeralabs/showcase"
+    compute-envs: "seqera_gcp_finland_fusion"
+    revision: "2.6.0"
+    profile: "test_nanopore"
+    labels: ["nanopore", "sars-cov-2"]
+    pre-run: "./pre-run.sh"
+    params:
+      outdir: "gs://seqeralabs-showcase-eu-north-1/nf-core-viralrecon/nanopore/results"
+    overwrite: False

@@ -3,13 +3,9 @@
   "launch": {
     "pipeline": "https://github.com/seqeralabs/nf-sentieon",
     "revision": "master",
-    "configProfiles": [
-      "test"
-    ],
+    "configProfiles": ["test"],
     "userSecrets": [],
-    "workspaceSecrets": [
-      "SENTIEON_LICENSE_BASE64"
-    ],
+    "workspaceSecrets": ["SENTIEON_LICENSE_BASE64"],
     "configText": "",
     "paramsText": "input: 'https://api.tower.nf/workspaces/138659136604200/datasets/2K6cdA0sRDw7Bauc67CmIT/v/1/n/sentieon-samples.csv'\noutdir: 's3://seqeralabs-showcase/nf-sentieon/results'",
     "preRunScript": "yum install jq -y\nexport NXF_VER=$(curl -s https://api.github.com/repos/nextflow-io/nextflow/tags | jq -r '.[].name' | head -n 1 | cut -c2-)",

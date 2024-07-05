@@ -1,0 +1,7 @@
+datasets:
+  - name: "SRP459762-carcinoma-samplesheet"
+    description: 'Samplesheet containing SRA IDs required to test the nf-core/rnaseq pipeline (v3.10) from end-to-end.\nFurther information about how the dataset was created can be obtained via the link below:\nhttps://github.com/nf-core/test-datasets/tree/rnaseq#minimal-test-dataset-origin'
+    header: True
+    workspace: "seqeralabs/showcase"
+    file-path: "../../datasets/SRP459762-carcinoma-samplesheet.csv"
+    overwrite: False

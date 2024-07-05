@@ -1,0 +1,7 @@
+datasets:
+  - name: "dragen_samples"
+    description: "Samplesheet containing links to minimal data required to test the seqeralabs/nf-dragen pipeline from end-to-end"
+    header: True
+    workspace: "seqeralabs/showcase"
+    file-path: "../../datasets/dragen_samples.csv"
+    overwrite: False
