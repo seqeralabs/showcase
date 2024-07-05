@@ -2,6 +2,6 @@ datasets:
   - name: "sarek_samples"
     description: "Samplesheet containing links to minimal data required to test the nf-core/sarek pipeline (v3.1.2) from end-to-end."
     header: True
-    workspace: "seqerakit-e2e/showcase"
+    workspace: "seqeralabs/showcase"
     file-path: "../../datasets/sarek_samples.csv"
     overwrite: False
