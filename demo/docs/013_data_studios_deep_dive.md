@@ -1,6 +1,20 @@
 # Data Studios deep dive
 This content is transcribed from a Data Studios demo presented by Rob Newman. 
 
+## Data studio images
+1. **Jupyter**
+      - Provides a Python-based environment for data analysis and visualization.
+
+2. **VS Code**
+      - Provides a code editor for writing and debugging code.
+
+3. **RStudio**
+      - Provides an integrated development environment for R programming.
+      
+4. **Xpra**
+      - Provides a remote desktop like interface running Ubuntu 22.04.4 (jammy) with X11 forwarding to enable execution of graphical applications.
+
+
 ## Data storage and data links
 1. **Create a custom data link**:
       - Use the Data Explorer to add a specific data directory.
@@ -50,4 +64,7 @@ This content is transcribed from a Data Studios demo presented by Rob Newman.
       - Only Jupyter and VS Code support real-time collaboration.
       - RStudio requires a Pro license for real-time collaboration — discussions with Posit for this capability are ongoing.
 
- 
+## Installation of software
+
+1. **Xpra**
+      - 
