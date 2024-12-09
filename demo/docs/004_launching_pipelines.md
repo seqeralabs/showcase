@@ -28,13 +28,13 @@ The launch form consists of General config, Run parameters, and Advanced options
 
 The General config section contains the following fields:
 
-- Pipeline to launch: The pipeline Git repository name or URL.
-- Revision number: A valid repository commit ID, tag, or branch name. For nf-core/rnaseq, this is prefilled.
-- (Optional) Config profiles: One or more configuration profile names to use for the execution. This pipeline will use the `test` profile.
-- Workflow run name: A unique identifier for the run, initially generated as a combination of an adjective and a scientist's name, but can be modified as needed.
-- (Optional) Labels: Assign new labels to the run in addition to `yeast`.
-- Compute environment: Select an existing workspace compute environment. This pipeline will use the `seqera_aws_ireland_fusionv2_nvme` compute environment.
-- Work directory: The (cloud or local) file storage path where pipeline scratch data is stored. Platform will create a scratch sub-folder if only a cloud bucket location is specified. This pipeline will use the `s3://seqeralabs-showcase` bucket.
+- **Pipeline to launch**: The pipeline Git repository name or URL.
+- **Revision number**: A valid repository commit ID, tag, or branch name. For nf-core/rnaseq, this is prefilled.
+- **Config profiles**: One or more configuration profile names to use for the execution. This pipeline will use the `test` profile.
+- **Workflow run name**: A unique identifier for the run, initially generated as a combination of an adjective and a scientist's name, but can be modified as needed.
+- **Labels**: Assign new labels to the run in addition to `yeast`.
+- **Compute environment**: Select an existing workspace compute environment. This pipeline will use the `seqera_aws_ireland_fusionv2_nvme` compute environment.
+- **Work directory**: The (cloud or local) file storage path where pipeline scratch data is stored. Platform will create a scratch sub-folder if only a cloud bucket location is specified. This pipeline will use the `s3://seqeralabs-showcase` bucket.
 
 ### 3. Launch form: Run parameters
 
@@ -64,9 +64,7 @@ type: info
 Users can upload their own samplesheets and make them available as a dataset in the 'Datasets' tab. See [Add a dataset](./006_adding_a_dataset.md).
 ///
 
-- `outdir`:
-
-  Most nf-core pipelines have standardized the usage of the `outdir` parameter to specify where the final results created by the pipeline are published. `outdir` must be different for each different pipeline run. Otherwise, your results will be overwritten. Since we want to publish these files to an S3 bucket, we must provide the directory path to the appropriate storage location (such as `s3://my-bucket/my-results).
+- `outdir`: Most nf-core pipelines have standardized the usage of the `outdir` parameter to specify where the final results created by the pipeline are published. `outdir` must be different for each different pipeline run. Otherwise, your results will be overwritten. Since we want to publish these files to an S3 bucket, we must provide the directory path to the appropriate storage location (such as `s3://my-bucket/my-results).
 
   For the `outdir` parameter, specify an S3 directory path manually, or select **Browse** to specify a cloud storage directory using Data Explorer.
 
