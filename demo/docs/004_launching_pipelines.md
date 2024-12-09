@@ -28,10 +28,10 @@ The launch form consists of General config, Run parameters, and Advanced options
 
 The General config section contains the following fields:
 
-- Pipeline to launch: The pipeline Git repository name or URL. For nf-core/rnaseq, this is prefilled and cannot be edited.
+- Pipeline to launch: The pipeline Git repository name or URL.
 - Revision number: A valid repository commit ID, tag, or branch name. For nf-core/rnaseq, this is prefilled.
 - (Optional) Config profiles: One or more configuration profile names to use for the execution. This pipeline will use the `test` profile.
-- Workflow run name: An identifier for the run, pre-filled with a name made of an adjective and the name of a scientist. This can be customized.
+- Workflow run name: A unique identifier for the run, initially generated as a combination of an adjective and a scientist's name, but can be modified as needed.
 - (Optional) Labels: Assign new labels to the run in addition to `yeast`.
 - Compute environment: Select an existing workspace compute environment. This pipeline will use the `seqera_aws_ireland_fusionv2_nvme` compute environment.
 - Work directory: The (cloud or local) file storage path where pipeline scratch data is stored. Platform will create a scratch sub-folder if only a cloud bucket location is specified. This pipeline will use the `s3://seqeralabs-showcase` bucket.
