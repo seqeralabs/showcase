@@ -1,22 +1,35 @@
 ## Introduction to Data Studios
-After running a pipeline, you may want to perform tertiary analysis in platforms like Jupyter Notebook or RStudio. Setting up the infrastructure for these platforms, including accessing pipeline data, results, and necessary bioinformatics packages, can be complex and time-consuming.
+After running a pipeline, you may want to perform interactive analysis in platforms like Jupyter Notebook or RStudio using your preferred tools. Setting up the infrastructure for these platforms, including accessing pipeline data, results, and necessary bioinformatics packages, can be complex and time-consuming.
 
-Data Studios streamlines this process for Seqera Platform users by allowing them to add interactive analysis environments based on templates, similar to how they add and share pipelines and datasets.
+Data Studios simplifies this process for Seqera Platform users by enabling them to create interactive analysis environments using container image templates or custom images, much like the way they add and share pipelines and datasets.
 
 Platform manages all the details, enabling users to easily select their preferred interactive tool and analyze their data within the platform.
 
 On the **Data Studios** tab, you can monitor and see the details of the data studios in your workspace.
 
-Data studios will have a name, followed by the cloud provider they are run on, the container image being used (Jupyter, VS Code, or RStudio), the user who created the data studio, the timestamp of creation, and the status indicating whether it has started, stopped, or is running. 
+Data studios will have a name, followed by the cloud provider they are run on, the container image being used (Jupyter, VS Code, RStudio or custom container), the user who created the data studio, the timestamp of creation, and the [status of the session](https://docs.seqera.io/platform/24.2/data_studios#session-statuses).
 
 ![Data studios overview](./assets/data-studios-overview.png)
 
 Select the three dots menu to:
-- See the details of the data studio
-- Connect to the studio
+- View the details of the data studio
 - Start the studio
-- Stop the studio
+- Start the studio as a new sessions
 - Copy the data studio URL
+- Stop the studio
+
+## Environments 
+Data Studios offers four container image templates: JupyterLab, RStudio Server, Visual Studio Code, and Xpra. These templates initially install a minimal set of packages, allowing you to add more as needed during a session. Customized studios display an arrow icon with a tooltip indicating the modified template.
+
+In addition to the Seqera-provided container template images, you can provide your own custom container environments by augmenting the Seqera-provided images with a list of Conda packages or by providing your own base container template image.
+
+Data Studios uses the Wave service to build custom container template images.
+
+/// details | Click to show animation
+    type: example
+
+![Data Studio overview details](assets/sp-cloud-data-studios-overview.gif)
+///
 
 ## Analyse RNAseq data in Data Studios
 
@@ -149,3 +162,5 @@ Inside IGV desktop, change the genome version to hg19. Then click on File -> Loa
 Search for PCSK9 and zoom into one of the exons of the gene. If you are on genome version hg19 and everything worked as expected, you should be able to see a coverage graph and reads as shown in the screenshot below:
 
 ![Xpra IGV desktop](assets/xpra-data-studios-IGV-view-bam.png)
+
+
