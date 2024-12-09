@@ -24,6 +24,6 @@ Seqera offers two deployment methods:
 
 ## Core components
 
-The Platform consists of three main architectural components: a backend container, a frontend container, and a database that stores all of the data required by the application. The frontend container communicates with the backend container and database via API calls. As a result, all features and activities available through the user interface can also be accessed programmatically via the Seqera Platform API. For more information, see the [Automation](./014_automation_on_the_seqera_platform.md) section later in the walkthrough.
+The Platform consists of three main architectural components: a backend container, a frontend container, and a database that stores all of the data required by the application. The frontend container communicates with the backend container and database via API calls. As a result, all features and activities available through the user interface can also be accessed programmatically via the Seqera Platform API. For more information, see the [Automation](./015_automation_on_the_seqera_platform.md) section later in the walkthrough.
 
 This walkthrough will demonstrate the various features of the Seqera Platform which makes it easier to build, launch, and manage scalable data pipelines.

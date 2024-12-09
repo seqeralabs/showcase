@@ -79,7 +79,7 @@ To stop a running session, select the three dots next to the status and select *
 /// details | Advanced
     type: info    
 
-For a more detailed use case of performing tertiary analysis with the results of the nf-core/rnaseq pipeline in an RStudio/RShiny app environment, take see [Tertiary analysis with Data Studios](./011_tertiary_analysis_data_studios.md).
+For a more detailed use case of performing interactive analysis with the results of the nf-core/rnaseq pipeline in an RStudio/RShiny app environment, take see [Interactive analysis with Data Studios](./011_interactive_analysis_data_studios.md).
 ///
 
 ## Checkpoints in Data Studios
@@ -95,5 +95,5 @@ For a detailed explanation about specific concepts of Data Studios and the tools
 /// details | Advanced
     type: info    
 
-For additional details on Data Studios based on a demonstration from Rob Newman, see [Data Studios deep dive](./013_data_studios_deep_dive.md).  
+For additional details on Data Studios based on a demonstration from Rob Newman, see [Data Studios deep dive](./014_data_studios_deep_dive.md).  
 ///

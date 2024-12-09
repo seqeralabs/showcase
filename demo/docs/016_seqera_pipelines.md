@@ -26,4 +26,4 @@ Select the **Launch Pipeline** tab to see various methods for launching the pipe
 
 ![Launch Seqera Pipeline](assets/seqera-pipelines-launch-cli.png)
 
-If you’re more at home in the terminal, you can use the launch box to grab commands for Nextflow, [Seqera Platform CLI](014_automation_on_the_seqera_platform.md), and [nf-core/tools](https://nf-co.re/docs/nf-core-tools).
+If you’re more at home in the terminal, you can use the launch box to grab commands for Nextflow, [Seqera Platform CLI](015_automation_on_the_seqera_platform.md), and [nf-core/tools](https://nf-co.re/docs/nf-core-tools).
