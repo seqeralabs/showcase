@@ -31,12 +31,6 @@ Data Studios uses the Wave service to build custom container template images.
 ![Data Studio overview details](assets/sp-cloud-data-studios-overview.gif)
 ///
 
-### Checkpoints
-Data Studios automatically creates and updates checkpoints every five minutes to save changes to the root filesystem. These checkpoints are stored in the compute environment's `.studios/checkpoints` folder with unique names.
-
-Checkpoints are particularly valuable when working on long-term analysis projects or when setting up complex environments. For example, if you spend time installing specific R packages, configuring Python environments, or customizing your workspace settings, checkpoints ensure this setup isn't lost between sessions. You can also share these configured environments with colleagues, saving them the time of recreating the same setup.
-
-Checkpoints preserve installed packages and configurations between sessions, but do not include changes to mounted data. When starting a new session, you can choose to restore from a previous checkpoint. Checkpoints can be renamed (spaces convert to underscores) and are automatically cleaned up when their associated data studios are deleted.
 
 ## Analyse RNAseq data in Data Studios
 
