@@ -4,10 +4,9 @@ Each workspace has a Launchpad that allows users to easily create and share Next
 
 Users can create their own pipelines, share them with others on the Launchpad, or tap into over a hundred community pipelines available on nf-core and other sources.
 
-
 /// details | Advanced
-        type: info   
-    
+type: info
+
 Adding a new pipeline is relatively simple and can be included as part of the demonstration. See [Add a Pipeline](./005_adding_a_pipeline.md).
 ///
 
@@ -17,66 +16,74 @@ Adding a new pipeline is relatively simple and can be included as part of the de
 
 Navigate to the Launchpad in the `seqeralabs/showcase` workspace and select **Launch** next to the `nf-core-rnaseq` pipeline to open the launch form.
 
-
 /// details | Click to show animation
-    type: example
+type: example
 
- ![Launch a pipeline](assets/sp-cloud-launch-form.gif)
+![Launch a pipeline](assets/sp-cloud-launch-form.gif)
 ///
 
+The launch form consists of General config, Run parameters, and Advanced options sections to specify your run parameters before execution, and an execution summary.
 
-### 2. Nextflow parameter schema
+### 2. Launch form: General config
 
-When you select **Launch**, a parameters page is shown to allow you to fine-tune the pipeline execution. This parameters form is rendered from a file called [`nextflow_schema.json`](https://github.com/nf-core/rnaseq/blob/master/nextflow_schema.json) which can be found in the root of the pipeline Git repository. The `nextflow_schema.json` file is a simple JSON-based schema describing pipeline parameters that allows pipeline developers to easily adapt their in-house Nextflow pipelines to be executed via the interactive Seqera Platform web interface.
+The General config section contains the following fields:
 
-See the ["Best Practices for Deploying Pipelines with the Seqera Platform"](https://seqera.io/blog/best-practices-for-deploying-pipelines-with-seqera-platform/) blog for further information on how to automatically build the parameter schema for any Nextflow pipeline using tooling maintained by the nf-core community. 
+- **Pipeline to launch**: The pipeline Git repository name or URL.
+- **Revision number**: A valid repository commit ID, tag, or branch name. For nf-core/rnaseq, this is prefilled.
+- **Config profiles**: One or more configuration profile names to use for the execution. This pipeline will use the `test` profile.
+- **Workflow run name**: A unique identifier for the run, initially generated as a combination of an adjective and a scientist's name, but can be modified as needed.
+- **Labels**: Assign new labels to the run in addition to `yeast`.
+- **Compute environment**: Select an existing workspace compute environment. This pipeline will use the `seqera_aws_ireland_fusionv2_nvme` compute environment.
+- **Work directory**: The (cloud or local) file storage path where pipeline scratch data is stored. Platform will create a scratch sub-folder if only a cloud bucket location is specified. This pipeline will use the `s3://seqeralabs-showcase` bucket.
 
-### 3. Parameter selection
+### 3. Launch form: Run parameters
 
-Adjust the following Platform-specific options if needed:
+After specifying the General config, the Run parameters page appears, allowing you to fine-tune pipeline execution. This form is generated from the pipeline's `nextflow_schema.json` file, which defines pipeline parameters in a simple JSON-based schema. This schema enables pipeline developers to easily adapt their Nextflow pipelines for execution via the Seqera Platform web interface.
 
-- `Workflow run name`:
+For more information on automatically building the parameter schema for any Nextflow pipeline, refer to the ["Best Practices for Deploying Pipelines with the Seqera Platform"](https://seqera.io/blog/best-practices-for-deploying-pipelines-with-seqera-platform/) blog.
 
-    A unique identifier for the run, pre-filled with a random name. This can be customized.
+You can enter Run parameters in three ways:
 
-- `Labels`:
+- **Input form view**: Enter text or select attributes from lists, and browse input and output locations with Data Explorer.
+- **Config view**: Edit raw configuration text directly in JSON or YAML format.
+- **Upload params file**: Upload a JSON or YAML file containing run parameters.
 
-    Assign new or existing labels to the run. For example, Project ID or genome version.
+Specify the following parameters for nf-core/rnaseq:
 
-Each pipeline including nf-core/rnaseq will have its own set of parameters that need to be provided in order to run it. The following parameters are mandatory:
+- `input`: Most nf-core pipelines have standardized the usage of the `input` parameter to specify an input samplesheet that contains paths to any input files (such as FastQ files) and any additional metadata required to run the pipeline. The `input` parameter can accept a file path to a samplesheet in the S3 bucket selected through Data Explorer (such as `s3://my-bucket/my-samplesheet.csv`). Alternatively, the Seqera Platform has a Datasets feature that allows you to upload structured data like samplesheets for use with Nextflow pipelines. For the purposes of this demonstration, select **Browse** next to the `input` parameter and search and select a pre-loaded dataset called "rnaseq_samples".
 
-- `input`:
+/// details | Click to show animation
+type: example
 
-    Most nf-core pipelines have standardized the usage of the `input` parameter to specify an input samplesheet that contains paths to any input files (such as FastQ files) and any additional metadata required to run the pipeline. The `input` parameter can accept a file path to a samplesheet in the S3 bucket selected through Data Explorer (such as `s3://my-bucket/my-samplesheet.csv`). Alternatively, the Seqera Platform has a Datasets feature that allows you to upload structured data like samplesheets for use with Nextflow pipelines.
+![Input parameters](assets/sp-cloud-launch-parameters-input.gif)
+///
 
-    For the purposes of this demonstration, select **Browse** next to the `input` parameter and search and select a pre-loaded dataset called "rnaseq_samples".
+/// details | Advanced
+type: info
 
-    /// details | Click to show animation
-        type: example
+Users can upload their own samplesheets and make them available as a dataset in the 'Datasets' tab. See [Add a dataset](./006_adding_a_dataset.md).
+///
 
-    ![Input parameters](assets/sp-cloud-launch-parameters-input.gif)
-    ///
-    
+- `outdir`: Most nf-core pipelines have standardized the usage of the `outdir` parameter to specify where the final results created by the pipeline are published. `outdir` must be different for each different pipeline run. Otherwise, your results will be overwritten. Since we want to publish these files to an S3 bucket, we must provide the directory path to the appropriate storage location (such as `s3://my-bucket/my-results).
 
-    /// details | Advanced
-        type: info    
-        
-    Users can upload their own samplesheets and make them available as a dataset in the 'Datasets' tab. See [Add a dataset](./006_adding_a_dataset.md).
-    ///
+  For the `outdir` parameter, specify an S3 directory path manually, or select **Browse** to specify a cloud storage directory using Data Explorer.
 
-- `outdir`:
+  /// details | Click to show animation
+  type: example
 
-    Most nf-core pipelines have standardized the usage of the `outdir` parameter to specify where the final results created by the pipeline are published. `outdir` must be different for each different pipeline run. Otherwise, your results will be overwritten. Since we want to publish these files to an S3 bucket, we must provide the directory path to the appropriate storage location (such as `s3://my-bucket/my-results).
+  ![Output parameters](assets/sp-cloud-run-parameters.gif)
+  ///
 
-    For the `outdir` parameter, specify an S3 directory path manually, or select **Browse** to specify a cloud storage directory using Data Explorer.
-
-
-    /// details | Click to show animation
-        type: example
-    
-    ![Output parameters](assets/sp-cloud-launch-parameters-outdir.gif)
-    ///
-
-Users can easily modify and specify other parameters to customize the pipeline execution through the parameters form. For example, in the **Read trimming options** section of the parameters page, change the `trimmer` to select `fastp` in the dropdown menu, instead of `trimgalore`, and select **Launch** button.
+Users can easily modify and specify other parameters to customize the pipeline execution through the parameters form. For example, in the **Read trimming options** section of the parameters page, change the `trimmer` to select `fastp` in the dropdown menu, instead of `trimgalore`.
 
 ![Read trimming options](./assets/trimmer-settings.png)
+
+### 4. Launch form: Advanced options
+
+The Advanced options allow you to specify additional settings for the pipeline execution. These include:
+
+- **Resource labels**: Use resource labels to tag the computing resources created during the workflow execution.
+- **Nextflow config**: Specify Nextflow configuration options to customize task execution. For example, you can specify an error handling strategy to continue the workflow even if some tasks fail.
+- **Pipeline secrets**: Pipeline secrets store keys and tokens used by workflow tasks to interact with external systems. Enter the names of any stored user or workspace secrets required for the workflow execution.
+
+After you have filled the necessary launch details, select **Launch**.
